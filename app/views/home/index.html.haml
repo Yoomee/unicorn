@@ -1,1 +1,40 @@
-%h1 Home
+.container
+  .row
+    .span12.offset2
+      #video
+        %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY", :frameborder => 0, :allowfullscreen => true}
+    .span2
+      #share_this
+        %h3 Share
+        %h2 this
+        %ul.unstyled
+          %li=twitter_share
+          %li=facebook_share
+          %li=google_share
+
+  .row#calls_to_action
+    .span4.offset2
+      #send_your_socks.call_to_action
+        %h3 Send your
+        %h2 socks
+    .span4
+      #buy_some_socks.call_to_action
+        %h2 Buy
+        %h3 some socks
+    .span4
+      #find_out_more.call_to_action
+        %h3 Find out
+        %h2 more
+#tweet_stream
+  .container
+    .row
+      .span4.offset2
+        %h2#tweet_stream_title
+          People who have sent socks
+      .span4
+        %h6 Rich Wells
+        I just sent some socks to Mexico and I think you should too
+      .span4
+        %h6 Rich Wells
+        I just sent some socks to Mexico and I think you should too
+      

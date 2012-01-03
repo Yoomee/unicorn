@@ -7,8 +7,13 @@
     = stylesheet_link_tag "application"
     =yield :head
   %body
+    =sharing_js
     .container
-      =yield
+      .row#header
+        .span12.offset2
+          #title What would you take?
+    =yield
+    .container
       %footer
         %p &copy; Yoomee 2011
-    
+    #fb-root
