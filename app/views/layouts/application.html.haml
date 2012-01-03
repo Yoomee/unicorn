@@ -1,0 +1,14 @@
+%html
+  %head
+    %title What would you take
+    = csrf_meta_tag
+    = favicon_link_tag
+    = javascript_include_tag "application"
+    = stylesheet_link_tag "application"
+    =yield :head
+  %body
+    .container
+      =yield
+      %footer
+        %p &copy; Yoomee 2011
+    
