@@ -1,6 +1,6 @@
 %html
   %head
-    %title What would you take
+    %title=t(:site_name)
     = csrf_meta_tag
     = favicon_link_tag
     = javascript_include_tag "application"
@@ -10,8 +10,12 @@
     =sharing_js
     .container
       .row#header
-        .span12.offset2
-          #title What would you take?
+        .span8.offset4
+          #title=t(:site_name)
+        .span2
+          #language_toggle
+            =link_to("ENG", "/", :class => "#{'active' if I18n.locale != :es}")
+            =link_to("ESP", "/?hl=es", :class => "#{'active' if I18n.locale == :es}")
     =yield
     .container
       %footer

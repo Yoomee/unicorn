@@ -28,6 +28,26 @@ body {
   font-weight:bold;
 }
 
+#language_toggle {
+  float:right;
+  margin-top:20px;
+}
+
+#language_toggle a{
+  padding:4px 5px;
+  border:2px solid #222;
+  color:white;
+  font-weight:bold;
+  border-radius:20px;
+  -moz-border-radius:20px;
+  -webkit-border-radius:20px;
+}
+
+#language_toggle a.active {
+  border-color:yellow;
+}
+
+
 /*========== Video ==========*/
 
 #video {
