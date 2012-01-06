@@ -269,9 +269,13 @@ div.send_socks_info p {
   width: 2000px;
 }
 #next_tweet {
+  background: url(/assets/arrow.png);
+  text-indent: -9999em;
+  width: 9px;
+  height: 16px;
   position: absolute;
   top: 25px;
-  right: 100px;
+  right: 90px;
 }
 .tweet {
 	margin: 5px 0 0 0;
