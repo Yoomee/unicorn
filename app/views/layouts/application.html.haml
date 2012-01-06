@@ -22,27 +22,30 @@
       #footer.row
         .span2.offset3
           %p
-            Directed by
+            =t :directed_by
             %strong
-              =link_to "Mark Silver", "http://www.marcsilver.net/", :id=>"yoomee_footer_logo", :target=>"_blank"
+              =link_to "Marc Silver", "http://www.marcsilver.net/", :id=>"yoomee_footer_logo", :target=>"_blank"
         .span4
           %p
-            Soundtrack
+            =t :soundtrack
             %br
             %strong
               "LILIES OF THE VALLEY"  
             %br
-            Composed by:  Jun MIYAKE
+            ="#{t :composed_by}:"
+            Jun MIYAKE
             %br
-            Published by: Métisse Music, France
+            ="#{t :published_by}:"
+            Métisse Music,
+            =t :france
         .span3
           %p
-            In collaboration with
+            =t :in_collaboration_with
             %br
             =link_to "Amnesty International", "#", :id=>"amnesty_footer_logo", :target=>"_blank"
         .span3
           %p
-            Website by
+            =t :website_by
             %br
             =link_to "Yoomee", "#", :id=>"yoomee_logo", :target=>"_blank"          
           
