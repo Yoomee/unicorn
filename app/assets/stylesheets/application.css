@@ -63,17 +63,18 @@ a#amnesty_logo {
 }
 
 #language_toggle a {
-	padding: 4px 5px;
-	border: 2px solid #222;
+	padding: 7px 9px;
 	color: white;
 	font-weight: bold;
 	border-radius: 20px;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
+	text-align: center;
 }
 
 #language_toggle a.active {
-	border-color: yellow;
+	background: url(/assets/language_toggle.png) no-repeat 0 2px;
+	
 }
 
 /*========== Video ==========*/
@@ -98,8 +99,9 @@ a#amnesty_logo {
 }
 .info_box .close_info_box {
 	position: absolute;
-	top: 20px;
-	right: 20px;
+	top: 15px;
+	right: 15px;
+	color: #888;
 }
 
 /*========== Share this ==========*/
