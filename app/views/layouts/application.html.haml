@@ -6,7 +6,7 @@
     = javascript_include_tag "application"
     = stylesheet_link_tag "application"
     =yield :head
-  %body
+  %body{:class => "hl_#{I18n.locale}"}
     =sharing_js
     .container
       .row#header

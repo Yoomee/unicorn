@@ -3,18 +3,17 @@
     .span12.offset2
       #video_wrapper
         #video.hide
-          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?wmode=opaque&enablejsapi=1&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true}
+          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?enablejsapi=1&wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true}
       #send_socks_info.info_box.hide
-        %p SEND YOUR SOCKS
-        =link_to("Close x", "#", :class => "close_info_box")
+        %p=(t :send_socks)
+        =link_to("#{t :close} x", "#", :class => "close_info_box")
       #buy_socks_info.info_box.hide
-        %p BUY SOME SOCKS
-        =link_to("Close x", "#", :class => "close_info_box")
+        %p=(t :buy_socks)
+        =link_to("#{t :close} x", "#", :class => "close_info_box")
     .span2
       #share_this_wrapper
-        #share_this
-          %h3 Share
-          %h2 this
+        #share_this.hide
+          %h3=t :share_this
           %ul.unstyled
             %li=twitter_share
             %li=facebook_share
@@ -23,21 +22,21 @@
   .row#calls_to_action
     #send_and_buy.span7.offset2    
       %h2#send_socks.call_to_action
-        =link_to "Send your socks", "#"
+        =link_to (t :send_socks), "#"
       %h2#buy_socks.call_to_action
-        =link_to "Buy some socks", "#"
+        =link_to (t :buy_socks), "#"
     .span5
       %h3#find_out_more.call_to_action
-        =link_to "http://www.youtube.com/user/invisiblesfilms", :id=>"find_out_more_link", do
+        =link_to "http://www.youtube.com/user/invisiblesfilms", :id=>"find_out_more_link", :target => '_blank', do
           %span.hide
-            Find out more
-          About the most dangerous journey in the world 
+            =t :find_out_more
+          =t :find_out_more_about
 #tweet_stream
   .container
     .row
       .span4.offset2
         %h2#tweet_stream_title
-          People who have sent socks
+          =t :people_sent_socks
       .tweet.span4
         =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
         =link_to "richwells", "#", :class=>"twitter_username"
