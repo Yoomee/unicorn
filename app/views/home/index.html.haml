@@ -3,7 +3,7 @@
     .span12.offset2
       #video_wrapper
         #video.hide
-          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?enablejsapi=1&wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true, :onload => "iframeOnload();"}
+          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/#{t :video_id}?enablejsapi=1&wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true, :onload => "iframeOnload();"}
       #send_socks_info.info_box.hide
         %h3.info_box_title=(t :send_socks)
         .send_socks_info
@@ -19,7 +19,7 @@
             Amnesty International is running a big campaign calling on Mexico to protect migrants. But we also know that small things can make a big difference.
           %p  
             On the jounery, untreated blisters & infected feet don’t just hurt, they can put your life at risk.
-        =link_to("#{t :close} x", "#", :class => "close_info_box")
+        =link_to("#{t :close} x", "javascript:void(0)", :class => "close_info_box")
     .span2
       #share_this_wrapper
         #share_this.hide
@@ -32,9 +32,9 @@
   .row#calls_to_action
     #send_and_buy.span7.offset2    
       %h2#send_socks.call_to_action
-        =link_to (t :send_socks), "#"
+        =link_to (t :send_socks), "javascript:void(0)"
       %h2#buy_socks.call_to_action
-        =link_to (t :buy_socks), "#"
+        =link_to (t :buy_socks), "javascript:void(0)"
     .span5
       %h3#find_out_more.call_to_action
         =link_to "http://www.youtube.com/user/invisiblesfilms", :id=>"find_out_more_link", :target => '_blank', do
@@ -51,18 +51,18 @@
         #all_tweets
           .tweet.span4
             =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-            =link_to "richwells", "#", :class=>"twitter_username"
+            =link_to "richwells", "javascript:void(0)", :class=>"twitter_username"
             I just sent some socks to Mexico and I think you should too
           .tweet.span4
             =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-            =link_to "matkins", "#", :class=>"twitter_username"
+            =link_to "matkins", "javascript:void(0)", :class=>"twitter_username"
             I just sent some socks to Mexico and I think you should too
           .tweet.span4
             =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-            =link_to "richwells", "#", :class=>"twitter_username"
+            =link_to "richwells", "javascript:void(0)", :class=>"twitter_username"
             I just sent some socks to Mexico and I think you should too
           .tweet.span4
             =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-            =link_to "matkins", "#", :class=>"twitter_username"
+            =link_to "matkins", "javascript:void(0)", :class=>"twitter_username"
             I just sent some socks to Mexico and I think you should too
-      =link_to(">", "#", :id => "next_tweet")
+      =link_to(">", "javascript:void(0)", :id => "next_tweet")
