@@ -54,6 +54,7 @@ a#amnesty_logo {
 }
 .hl_es #title {
 	background-image: url(/assets/logo.es.png);
+	background-position: top center;
 }
 
 
