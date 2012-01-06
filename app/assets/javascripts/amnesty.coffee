@@ -8,17 +8,17 @@ $(document).ready ->
 
 Application =
   hideInfoBox: ->
-    $('.info_box:visible').fadeOut 100, ->
-      $('#video').fadeIn(100)
+    $('.info_box:visible').hide()
+    $('#video_wrapper').fadeIn(100)
   showBuySocksInfo: ->
     if $('#buy_socks_info').is(':visible')
       Application.hideInfoBox()
     else
-      $('#video:visible, .info_box:visible').fadeOut 100, ->
-        $('#buy_socks_info').fadeIn(100)
+      $('#video_wrapper:visible, .info_box:visible').hide()
+      $('#buy_socks_info').fadeIn(100)
   showSendSocksInfo: ->
     if $('#send_socks_info').is(':visible')
       Application.hideInfoBox()
     else
-      $('#video:visible, .info_box:visible').fadeOut 100, ->
-        $('#send_socks_info').fadeIn(100)
+      $('#video_wrapper:visible, .info_box:visible').hide()
+      $('#send_socks_info').fadeIn(100)
