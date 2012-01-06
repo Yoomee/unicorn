@@ -19,6 +19,31 @@
             =link_to("ESP", "/?hl=es", :class => "#{'active' if I18n.locale == :es}")
     =yield
     .container
-      %footer
-        %p &copy; Yoomee 2011
+      #footer.row
+        .span2.offset3
+          %p
+            Directed by
+            %strong
+              =link_to "Mark Silver", "http://www.marcsilver.net/", :id=>"yoomee_footer_logo", :target=>"_blank"
+        .span4
+          %p
+            Soundtrack
+            %br
+            %strong
+              "LILIES OF THE VALLEY"  
+            %br
+            Composed by:  Jun MIYAKE
+            %br
+            Published by: Métisse Music, France
+        .span3
+          %p
+            In collaboration with
+            %br
+            =link_to "Amnesty International", "#", :id=>"amnesty_footer_logo", :target=>"_blank"
+        .span3
+          %p
+            Website by
+            %br
+            =link_to "Yoomee", "#", :id=>"yoomee_logo", :target=>"_blank"          
+          
     #fb-root
