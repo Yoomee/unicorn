@@ -2,12 +2,13 @@ module ShareHelper
   
   # Supporting javascripts
   def facebook_js
+    language = I18n.locale == :es ? "es_ES" : "en_GB"
     fb_js = <<-JAVASCRIPT
     (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+          js.src = "//connect.facebook.net/#{language}/all.js#xfbml=1";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     JAVASCRIPT
@@ -16,7 +17,7 @@ module ShareHelper
   
   def google_js
     g_js = <<-JAVASCRIPT
-      window.___gcfg = {lang: 'en-GB'};
+      window.___gcfg = {lang: '#{(I18n.locale == :es ? 'es' : 'en-GB')}'};
       (function() {
         var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
         po.src = 'https://apis.google.com/js/plusone.js';
@@ -40,7 +41,7 @@ module ShareHelper
   end
   
   def twitter_share
-    out = link_to("Tweet", "https://twitter.com/share", :class => "twitter-share-button", :"data-text" => "Check out this site", :"data-related" => "amnesty")
+    out = link_to(t(:tweet), "https://twitter.com/share", :class => "twitter-share-button", :"data-text" => "Check out this site", :"data-related" => "amnesty")
     out << javascript_tag("!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=\"//platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");")
   end
 

@@ -52,6 +52,10 @@ a#amnesty_logo {
 	width: 380px;
 	height: 40px;
 }
+.hl_es #title {
+	background-image: url(/assets/logo.es.png);
+}
+
 
 #language_toggle {
 	float: right;
@@ -81,6 +85,8 @@ a#amnesty_logo {
 #video_wrapper {
 	width:700px;
 	height:395px;
+  position:relative;
+  z-index:10;
 }
 .info_box {
 	padding: 20px;
@@ -98,14 +104,24 @@ a#amnesty_logo {
 
 /*========== Share this ==========*/
 
-#share_this {
+#share_this_wrapper {
 	margin-top: 20px;
+  position:relative;
+  z-index:5;
+}
+#share_this {
 	width: 100px;
 	height: 160px;
 	background: url(/assets/share_this.png) no-repeat;
 	padding: 80px 0 0 20px;
-	margin-left: -20px;
+  position:absolute;
+	left: -150px;
+  z-index:5;
 }
+.hl_es #share_this{
+	background-image: url(/assets/share_this.es.png);
+}
+
 #share_this li {
 	height: 20px;
 }
@@ -154,16 +170,15 @@ h2.call_to_action a {
 	text-indent: -9000em;
 	background: url(/assets/send_and_buy.png) no-repeat 0 0;
 	width: 219px;
-	height: 93px;
-	
-	
-	
+	height: 93px;	
 }
+.hl_es h2.call_to_action a {
+	background-image: url(/assets/send_and_buy.es.png);
+}
+
 h2#buy_socks a {
 	background-position: top right;
 	width: 180px;
-
-	
 }
 h2#buy_socks a:hover {
 
@@ -192,6 +207,9 @@ h2#buy_socks a:hover {
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 17px;
+}
+.hl_es #find_out_more a {
+  background-image: url(/assets/find_out_more.es.jpg);
 }
 #find_out_more a:hover {
 	text-decoration: none;
@@ -228,15 +246,14 @@ div.send_socks_info p {
 #tweet_stream_title {
 	color: #fff;
 	text-transform: uppercase;
-<<<<<<< HEAD
 	margin: 0 0 0 13px;
 	text-indent: -9000em;
 	height: 80px;
 	width: 180px;
-	
 	background: url(/assets/tweet_stream_title.png) no-repeat 0 -6px;
-	
-	
+}
+.hl_es #tweet_stream_title {
+	background-image: url(/assets/tweet_stream_title.es.png);
 }
 .tweet {
 	margin: 5px 0 0 0;
@@ -292,10 +309,8 @@ a#yoomee_logo {
 }
 a#yoomee_logo:hover {
 	opacity: 1;
-=======
 	font-size: 24px;
 	line-height: 24px;
 	text-align: center;
 	padding: 0px 30px;
->>>>>>> 75a0b63f77fce2a1e98d0c568a1d676f878da5c4
 }
