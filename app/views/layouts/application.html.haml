@@ -10,7 +10,8 @@
     =sharing_js
     .container
       .row#header
-        .span8.offset4
+        .span10.offset2
+          =link_to "Amnesty International", "http://www.amnesty.org/", :target=>"_blank", :id=>"amnesty_logo"
           #title=t(:site_name)
         .span2
           #language_toggle
