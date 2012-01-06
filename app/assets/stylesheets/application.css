@@ -77,7 +77,7 @@ a#amnesty_logo {
 /*========== Video ==========*/
 
 #video {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	background: #000;
 	
 }
@@ -173,7 +173,7 @@ h2#buy_some_socks a:hover {
 	display: block;
 	background: url(/assets/find_out_more.jpg) no-repeat 0 0;
 	width: 170px;
-	height: 92px;
+	height: 56px;
 	padding: 37px 90px 0 20px;
 	color: #fff;
 	font-size: 13px;
@@ -188,15 +188,74 @@ h2#buy_some_socks a:hover {
 /*========== Twitter stream ==========*/
 
 #tweet_stream {
-	background: #57544F;
-	padding: 10px 0px;
+	background: #57544F url(/assets/tweets_bg.jpg) no-repeat top center;
+	padding: 12px 0px 12px;
 }
 
 #tweet_stream_title {
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 24px;
-	line-height: 24px;
-	text-align: center;
-	padding: 0px 30px;
+	margin: 0 0 0 13px;
+	text-indent: -9000em;
+	height: 80px;
+	width: 180px;
+	
+	background: url(/assets/tweet_stream_title.png) no-repeat 0 -6px;
+	
+	
+}
+.tweet {
+	margin: 5px 0 0 0;
+}
+.twitter_profile_image {
+	float: left;
+	margin: 4px 10px 0 0;
+	
+}
+
+a.twitter_username {
+	color: #fff;
+	font-weight: bold;
+	
+}
+
+/*========== Footer ==========*/
+
+#footer {
+	padding-top: 20px;
+	padding-bottom: 70px;
+	color: #898e8f;
+	font-size: 12px;
+}
+#footer a {
+	color: #898e8f;
+}
+a#amnesty_footer_logo {
+	display: block;
+	float: left;
+	text-indent: -9000em;
+	background: url(/assets/amnesty_footer_logo.png) no-repeat 0 0;
+	width: 130px;
+	height: 50px;
+	
+	opacity: 0.6;
+	
+}
+a#amnesty_footer_logo:hover {
+	opacity: 1;
+}
+a#yoomee_logo {
+	display: block;
+	float: left;
+	text-indent: -9000em;
+	background: url(/assets/yoomee_logo.png) no-repeat 0 0;
+	width: 130px;
+	height: 50px;
+	margin: 6px 0 0;
+	
+	opacity: 0.6;
+	
+}
+a#yoomee_logo:hover {
+	opacity: 1;
 }

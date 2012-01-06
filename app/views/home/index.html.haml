@@ -18,7 +18,7 @@
       %h2#buy_some_socks.call_to_action=link_to "Buy some socks", "#"
     .span5
       %h3#find_out_more.call_to_action
-        =link_to "#", :id=>"find_out_more_link", do
+        =link_to "http://www.youtube.com/user/invisiblesfilms", :id=>"find_out_more_link", do
           %span.hide
             Find out more
           About the most dangerous journey in the world 
@@ -28,10 +28,12 @@
       .span4.offset2
         %h2#tweet_stream_title
           People who have sent socks
-      .span4
-        %h6 Rich Wells
+      .tweet.span4
+        =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+        =link_to "richwells", "#", :class=>"twitter_username"
         I just sent some socks to Mexico and I think you should too
-      .span4
-        %h6 Rich Wells
+      .tweet.span4
+        =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+        =link_to "matkins", "#", :class=>"twitter_username"
         I just sent some socks to Mexico and I think you should too
       
