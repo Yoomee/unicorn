@@ -1,8 +1,15 @@
 .container
   .row
     .span12.offset2
-      #video
-        %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true}
+      #video_wrapper
+        #video.hide
+          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true}
+      #send_socks_info.info_box.hide
+        %p SEND YOUR SOCKS
+        =link_to("Close x", "#", :class => "close_info_box")
+      #buy_socks_info.info_box.hide
+        %p BUY SOME SOCKS
+        =link_to("Close x", "#", :class => "close_info_box")
     .span2
       #share_this
         %h3 Share
@@ -14,8 +21,10 @@
 
   .row#calls_to_action
     #send_and_buy.span7.offset2    
-      %h2#send_your_socks.call_to_action=link_to "Send your socks", "#"
-      %h2#buy_some_socks.call_to_action=link_to "Buy some socks", "#"
+      %h2#send_socks.call_to_action
+        =link_to "Send your socks", "#"
+      %h2#buy_socks.call_to_action
+        =link_to "Buy some socks", "#"
     .span5
       %h3#find_out_more.call_to_action
         =link_to "http://www.youtube.com/user/invisiblesfilms", :id=>"find_out_more_link", do
