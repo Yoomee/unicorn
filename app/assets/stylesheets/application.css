@@ -1,3 +1,5 @@
+/* @override http://localhost:3000/assets/application.css?body=1 */
+
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
@@ -7,163 +9,194 @@
 */
 
 body {
-  background-color:black;
-  color:white;
+
+
+/*  background-color:black;*/
+	background: #000 url(/assets/bg.jpg) repeat-x top center;
+	color: white;
 }
+
+/*========== re-used styles ==========*/
+#video, #send_and_buy, #find_out_more a  {
+	box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	
+}
+.hide {
+	display: none;
+}
+
 
 /*========== Header ==========*/
 
 #header {
-  background:#222;
-  margin-bottom:15px;
-}
 
+	margin-bottom: 15px;
+}
+a#amnesty_logo {
+	background: url(/assets/amnesty_logo.png) no-repeat 0 0;
+	text-indent: -9000em;
+	display: block;
+	float: left;
+	width: 81px;
+	height: 31px;
+	margin: 40px 0 0 0;
+	
+}
 #title {
-  margin:30px 0px;
-  text-align:center;
-  text-transform:uppercase;
-  color:white;
-  font-size:24px;
-  line-height:29px;
-  font-weight:bold;
+	margin: 40px 0px 20px 82px;
+	text-transform: uppercase;
+	background: url(/assets/logo.png) no-repeat 0 0;
+	display: block;
+	text-indent: -9000em;
+	float: left;
+	width: 380px;
+	height: 40px;
 }
 
 #language_toggle {
-  float:right;
-  margin-top:20px;
+	float: right;
+	margin-top: 50px;
 }
 
-#language_toggle a{
-  padding:4px 5px;
-  border:2px solid #222;
-  color:white;
-  font-weight:bold;
-  border-radius:20px;
-  -moz-border-radius:20px;
-  -webkit-border-radius:20px;
+#language_toggle a {
+	padding: 4px 5px;
+	border: 2px solid #222;
+	color: white;
+	font-weight: bold;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
 }
 
 #language_toggle a.active {
-  border-color:yellow;
+	border-color: yellow;
 }
-
 
 /*========== Video ==========*/
 
 #video {
-  margin-bottom:15px
+	margin-bottom: 20px;
+	background: #000;
+	
 }
 
 /*========== Share this ==========*/
+
 #share_this {
-  margin-top:40px;
+	margin-top: 20px;
+	width: 100px;
+	height: 160px;
+	background: url(/assets/share_this.png) no-repeat;
+	padding: 80px 0 0 20px;
+	margin-left: -20px;
 }
-
+#share_this li {
+	height: 20px;
+}
 #share_this h2,
-#share_this h3{
-  text-transform:uppercase;
-  color:white;
+#share_this h3 {
+	text-transform: uppercase;
+	color: white;
+	display: none;
 }
 
-#share_this h2{
-  font-size:26px;
-  line-height:26px;
-  margin-bottom:10px;
+#share_this h2 {
+	font-size: 26px;
+	line-height: 26px;
+	margin-bottom: 10px;
 }
 
-#share_this h3{
-  font-size:17px;
-  line-height:18px;
+#share_this h3 {
+	font-size: 17px;
+	line-height: 18px;
 }
 
-#share_this ul{
-  background:#ccc;
-  margin-left:-20px;
-  padding:15px 10px 15px 20px;
+#share_this ul {
+	margin-left: -20px;
+	padding: 15px 10px 15px 20px;
 }
 
-#share_this ul li{
-  margin-bottom:10px;
+#share_this ul li {
+	margin-bottom: 10px;
 }
-
 
 /*========== Calls to action ==========*/
 
 #calls_to_action {
-  margin-bottom:30px;
+	margin-bottom: 30px;
 }
 
 .call_to_action {
-  padding:15px 20px;
-  height:70px;
+	float: left;
+	display: block;
+
 }
 
-.call_to_action h2,
-.call_to_action h3 {
-  text-transform:uppercase;
-  letter-spacing:1px;
+h2.call_to_action a {
+	float: left;
+	display: block;
+	text-indent: -9000em;
+	background: url(/assets/send_and_buy.png) no-repeat 0 0;
+	width: 219px;
+	height: 93px;
+	
+	
+	
+}
+h2#buy_some_socks a {
+	background-position: top right;
+	width: 180px;
+
+	
+}
+h2#buy_some_socks a:hover {
+
+}
+#send_your_socks {
+
+	
 }
 
-
-#send_your_socks { background-color: #FDFC01; }
-#send_your_socks h2,
-#send_your_socks h3{
-  color:black;
-}
-#send_your_socks h2{
-  font-size:44px;
-  line-height:44px;
-}
-#send_your_socks h3{
-  font-size:24px;
-  line-height:24px;
+#buy_some_socks h2 {
+	font-size: 54px;
+	line-height: 38px;
+	margin-bottom: 8px;
 }
 
-#buy_some_socks { background-color: #7E7E36;}
-#buy_some_socks h2,
-#buy_some_socks h3{
-  color:white;
+#buy_some_socks h3 {
+	font-size: 22px;
+	line-height: 22px;
 }
-#buy_some_socks h2{
-  font-size:54px;
-  line-height:38px;
-  margin-bottom:8px;
+#find_out_more a {
+	display: block;
+	background: url(/assets/find_out_more.jpg) no-repeat 0 0;
+	width: 170px;
+	height: 92px;
+	padding: 37px 90px 0 20px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 17px;
 }
-#buy_some_socks h3{
-  font-size:22px;
-  line-height:22px;
-}
-
-#find_out_more { background-color: #666;}
-#find_out_more h2,
-#find_out_more h3{
-  color:white;
-}
-#find_out_more h2{
-  font-size:44px;
-  line-height:44px;
-}
-#find_out_more h3{
-  font-size:24px;
-  line-height:24px;
+#find_out_more a:hover {
+	text-decoration: none;
 }
 
 
 /*========== Twitter stream ==========*/
 
 #tweet_stream {
-  background:#57544F;
-  padding:10px 0px;
+	background: #57544F;
+	padding: 10px 0px;
 }
 
-#tweet_stream_title{
-  color:#fff;
-  text-transform:uppercase;
-  font-size:24px;
-  line-height:24px;
-  text-align:center;
-  padding:0px 30px;
+#tweet_stream_title {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 24px;
+	text-align: center;
+	padding: 0px 30px;
 }
-
-
-
