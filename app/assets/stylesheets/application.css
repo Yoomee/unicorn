@@ -99,14 +99,19 @@ a#amnesty_logo {
 
 /*========== Share this ==========*/
 
-#share_this {
+#share_this_wrapper {
 	margin-top: 20px;
+  position:relative;
+}
+#share_this {
 	width: 100px;
 	height: 160px;
 	background: url(/assets/share_this.png) no-repeat;
 	padding: 80px 0 0 20px;
-	margin-left: -20px;
+  position:absolute;
+	left: -20px;
 }
+
 #share_this li {
 	height: 20px;
 }

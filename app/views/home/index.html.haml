@@ -3,15 +3,16 @@
     .span12.offset2
       #video_wrapper
         #video.hide
-          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true}
+          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?wmode=opaque&enablejsapi=1&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true}
     .span2
-      #share_this
-        %h3 Share
-        %h2 this
-        %ul.unstyled
-          %li=twitter_share
-          %li=facebook_share
-          %li=google_share
+      #share_this_wrapper
+        #share_this
+          %h3 Share
+          %h2 this
+          %ul.unstyled
+            %li=twitter_share
+            %li=facebook_share
+            %li=google_share
 
   .row#calls_to_action
     #send_and_buy.span7.offset2    
