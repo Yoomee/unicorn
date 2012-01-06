@@ -1,8 +1,9 @@
 .container
   .row
     .span12.offset2
-      #video
-        %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true}
+      #video_wrapper
+        #video.hide
+          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true}
     .span2
       #share_this
         %h3 Share

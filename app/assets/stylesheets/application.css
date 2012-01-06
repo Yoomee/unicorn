@@ -17,7 +17,7 @@ body {
 }
 
 /*========== re-used styles ==========*/
-#video, #send_and_buy, #find_out_more a  {
+#video_wrapper, #send_and_buy, #find_out_more a  {
 	box-shadow: 0px 0px 20px #000;
 	-moz-box-shadow: 0px 0px 20px #000;
 	-webkit-box-shadow: 0px 0px 20px #000;
@@ -76,10 +76,25 @@ a#amnesty_logo {
 
 /*========== Video ==========*/
 
-#video {
+#video_wrapper {
 	margin-bottom: 20px;
 	background: #000;
-	
+	width:700px;
+  height:395px;
+  position:relative;
+  z-index:0;
+}
+
+#video_loader {
+  width:100%;
+  height:100%;
+  background:#f00;
+  z-index:20;
+  position:absolute;
+}
+
+#video{
+  z-index:10;
 }
 
 /*========== Share this ==========*/
