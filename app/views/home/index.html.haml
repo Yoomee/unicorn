@@ -3,7 +3,7 @@
     .span12.offset2
       #video_wrapper
         #video.hide
-          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?enablejsapi=1&wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true}
+          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/r8WT_ZCUmaY?enablejsapi=1&wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true, :onload => "iframeOnload();"}
       #send_socks_info.info_box.hide
         %h3.info_box_title=(t :send_socks)
         .send_socks_info
@@ -47,12 +47,22 @@
       .span4.offset2
         %h2#tweet_stream_title
           =t :people_sent_socks
-      .tweet.span4
-        =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-        =link_to "richwells", "#", :class=>"twitter_username"
-        I just sent some socks to Mexico and I think you should too
-      .tweet.span4
-        =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-        =link_to "matkins", "#", :class=>"twitter_username"
-        I just sent some socks to Mexico and I think you should too
-      
+      #tweet_window.span8
+        #all_tweets
+          .tweet.span4
+            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+            =link_to "richwells", "#", :class=>"twitter_username"
+            I just sent some socks to Mexico and I think you should too
+          .tweet.span4
+            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+            =link_to "matkins", "#", :class=>"twitter_username"
+            I just sent some socks to Mexico and I think you should too
+          .tweet.span4
+            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+            =link_to "richwells", "#", :class=>"twitter_username"
+            I just sent some socks to Mexico and I think you should too
+          .tweet.span4
+            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+            =link_to "matkins", "#", :class=>"twitter_username"
+            I just sent some socks to Mexico and I think you should too
+      =link_to(">", "#", :id => "next_tweet")

@@ -244,7 +244,9 @@ div.send_socks_info p {
 	background: #57544F url(/assets/tweets_bg.jpg) no-repeat top center;
 	padding: 12px 0px 12px;
 }
-
+#tweet_stream .row {
+  position: relative;
+}
 #tweet_stream_title {
 	color: #fff;
 	text-transform: uppercase;
@@ -257,15 +259,35 @@ div.send_socks_info p {
 .hl_es #tweet_stream_title {
 	background-image: url(/assets/tweet_stream_title.es.png);
 }
+#tweet_window {
+  float: left;
+  overflow: hidden;
+  height: 65px;
+  position: relative;
+}
+#all_tweets {
+  position: absolute;
+  height: 65px;
+  width: 2000px;
+}
+#next_tweet {
+  background: url(/assets/arrow.png);
+  text-indent: -9999em;
+  width: 9px;
+  height: 16px;
+  position: absolute;
+  top: 25px;
+  right: 90px;
+}
 .tweet {
 	margin: 5px 0 0 0;
+	padding-right: 20px;
+	float: left;
 }
 .twitter_profile_image {
 	float: left;
 	margin: 4px 10px 0 0;
-	
 }
-
 a.twitter_username {
 	color: #fff;
 	font-weight: bold;
