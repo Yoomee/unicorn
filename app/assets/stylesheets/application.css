@@ -289,10 +289,8 @@ a#yoomee_logo {
 }
 a#yoomee_logo:hover {
 	opacity: 1;
-=======
 	font-size: 24px;
 	line-height: 24px;
 	text-align: center;
 	padding: 0px 30px;
->>>>>>> 75a0b63f77fce2a1e98d0c568a1d676f878da5c4
 }
