@@ -204,29 +204,43 @@ h2#buy_socks a:hover {
 	background: #57544F url(/assets/tweets_bg.jpg) no-repeat top center;
 	padding: 12px 0px 12px;
 }
-
+#tweet_stream .row {
+  position: relative;
+}
 #tweet_stream_title {
 	color: #fff;
 	text-transform: uppercase;
-<<<<<<< HEAD
 	margin: 0 0 0 13px;
 	text-indent: -9000em;
 	height: 80px;
 	width: 180px;
-	
 	background: url(/assets/tweet_stream_title.png) no-repeat 0 -6px;
-	
-	
+}
+#tweet_window {
+  float: left;
+  overflow: hidden;
+  height: 65px;
+  position: relative;
+}
+#all_tweets {
+  position: absolute;
+  height: 65px;
+  width: 2000px;
+}
+#next_tweet {
+  position: absolute;
+  top: 25px;
+  right: 100px;
 }
 .tweet {
 	margin: 5px 0 0 0;
+	padding-right: 20px;
+	float: left;
 }
 .twitter_profile_image {
 	float: left;
 	margin: 4px 10px 0 0;
-	
 }
-
 a.twitter_username {
 	color: #fff;
 	font-weight: bold;
@@ -272,10 +286,8 @@ a#yoomee_logo {
 }
 a#yoomee_logo:hover {
 	opacity: 1;
-=======
 	font-size: 24px;
 	line-height: 24px;
 	text-align: center;
 	padding: 0px 30px;
->>>>>>> 75a0b63f77fce2a1e98d0c568a1d676f878da5c4
 }

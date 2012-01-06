@@ -37,12 +37,23 @@
       .span4.offset2
         %h2#tweet_stream_title
           People who have sent socks
-      .tweet.span4
-        =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-        =link_to "richwells", "#", :class=>"twitter_username"
-        I just sent some socks to Mexico and I think you should too
-      .tweet.span4
-        =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-        =link_to "matkins", "#", :class=>"twitter_username"
-        I just sent some socks to Mexico and I think you should too
+      #tweet_window.span8
+        #all_tweets
+          .tweet.span4
+            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+            =link_to "richwells", "#", :class=>"twitter_username"
+            I just sent some socks to Mexico and I think you should too
+          .tweet.span4
+            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+            =link_to "matkins", "#", :class=>"twitter_username"
+            I just sent some socks to Mexico and I think you should too
+          .tweet.span4
+            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+            =link_to "richwells", "#", :class=>"twitter_username"
+            I just sent some socks to Mexico and I think you should too
+          .tweet.span4
+            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
+            =link_to "matkins", "#", :class=>"twitter_username"
+            I just sent some socks to Mexico and I think you should too
+      =link_to(">", "#", :id => "next_tweet")
       
