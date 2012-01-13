@@ -1,4 +1,5 @@
-%html
+!!! Strict
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %title=t(:site_name)
     = csrf_meta_tag
@@ -21,22 +22,25 @@
       #footer.row
         .span2.offset3
           %p
-            Directed by
+            =t :directed_by
             %strong
-              =link_to "Mark Silver", "http://www.marcsilver.net/", :id=>"yoomee_footer_logo", :target=>"_blank"
+              =link_to "Marc Silver", "http://www.marcsilver.net/", :id=>"yoomee_footer_logo", :target=>"_blank"
         .span4
           %p
-            Soundtrack
+            =t :soundtrack
             %br
             %strong
               "LILIES OF THE VALLEY"  
             %br
-            Composed by:  Jun MIYAKE
+            ="#{t :composed_by}:"
+            Jun MIYAKE
             %br
-            Published by: Métisse Music, France
+            ="#{t :published_by}:"
+            Métisse Music,
+            =t :france
         .span3.offset3
           %p
-            Website by
+            =t :website_by
             %br
             =link_to "Yoomee", "#", :id=>"yoomee_logo", :target=>"_blank"          
           

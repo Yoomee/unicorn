@@ -9,20 +9,20 @@ $(document).ready ->
 
 InfoBox =
   hideAll: ->
-    $('.info_box:visible').hide()
-    $('#video_wrapper').fadeIn(100)
+    $('.info_box:visible').fadeOut 100, ->
+      $('#video_wrapper').fadeIn(300)
   showBuySocks: ->
     if $('#buy_socks_info').is(':visible')
       InfoBox.hideAll()
     else
-      $('#video_wrapper:visible, .info_box:visible').hide()
-      $('#buy_socks_info').fadeIn(100)
+      $('#video_wrapper:visible, .info_box:visible').fadeOut 100, ->
+        $('#buy_socks_info').fadeIn(300)
   showSendSocks: ->
     if $('#send_socks_info').is(':visible')
       InfoBox.hideAll()
     else
-      $('#video_wrapper:visible, .info_box:visible').hide()
-      $('#send_socks_info').fadeIn(100)
+      $('#video_wrapper:visible, .info_box:visible').fadeOut 100, ->
+        $('#send_socks_info').fadeIn(300)
 
 window.Tweets =
   init: ->
