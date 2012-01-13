@@ -7,18 +7,18 @@
       #send_socks_info.info_box.hide
         %h3.info_box_title=(t :send_socks)
         .send_socks_info
-          %p
-            Amnesty International is running a big campaign calling on Mexico to protect migrants. But we also know that small things can make a big difference.
-          %p  
-            On the jounery, untreated blisters & infected feet don’t just hurt, they can put your life at risk.
+          %p=t :send_socks_1
+          %p=t :send_socks_2  
+        .post_socks_address
+          %p=t(:send_socks_address).gsub(/\n/,"<br/>").html_safe
         =link_to("#{t :close} x", "#", :class => "close_info_box")
       #buy_socks_info.info_box.hide
         %h3.info_box_title=(t :send_socks)
         .send_socks_info
-          %p
-            Amnesty International is running a big campaign calling on Mexico to protect migrants. But we also know that small things can make a big difference.
-          %p  
-            On the jounery, untreated blisters & infected feet don’t just hurt, they can put your life at risk.
+          %p=t :buy_socks_1 
+          %p=t :buy_socks_2 
+        .send_socks_tag
+          %p=t :buy_socks_tag_text 
         =link_to("#{t :close} x", "javascript:void(0)", :class => "close_info_box")
     .span2
       #share_this_wrapper
@@ -32,9 +32,9 @@
   .row#calls_to_action
     #send_and_buy.span7.offset2    
       %h2#send_socks.call_to_action
-        =link_to (t :send_socks), "javascript:void(0)"
+        =link_to (t :send_socks_button), "javascript:void(0)"
       %h2#buy_socks.call_to_action
-        =link_to (t :buy_socks), "javascript:void(0)"
+        =link_to (t :buy_socks_button), "javascript:void(0)"
     .span5
       %h3#find_out_more.call_to_action
         =link_to "http://www.youtube.com/user/invisiblesfilms", :id=>"find_out_more_link", :target => '_blank', do

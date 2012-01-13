@@ -10,10 +10,9 @@
     =sharing_js
     .container
       .row#header
-        .span10.offset2
+        .span14.offset2
           =link_to "Amnesty International", "http://www.amnesty.org/", :target=>"_blank", :id=>"amnesty_logo"
           #title=t(:site_name)
-        .span2
           #language_toggle
             =link_to("ENG", "/", :class => "#{'active' if I18n.locale != :es}")
             =link_to("ESP", "/?hl=es", :class => "#{'active' if I18n.locale == :es}")
@@ -35,12 +34,7 @@
             Composed by:  Jun MIYAKE
             %br
             Published by: Métisse Music, France
-        .span3
-          %p
-            In collaboration with
-            %br
-            =link_to "Amnesty International", "#", :id=>"amnesty_footer_logo", :target=>"_blank"
-        .span3
+        .span3.offset3
           %p
             Website by
             %br

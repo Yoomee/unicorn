@@ -3,8 +3,8 @@
 
 en:
   site_name: "What would you take?"
-  send_socks: "Send your socks"
-  buy_socks: "Buy some socks"
+  send_socks_button: "Post some socks"
+  buy_socks_button: "Send socks online"
   share_this: "Share this"
   find_out_more: "Find out more"
   find_out_more_about: "About the most dangerous journey in the world"
@@ -12,3 +12,14 @@ en:
   tweet: Tweet
   close: Close
   video_id: r8WT_ZCUmaY
+  send_socks_1: "Amnesty International is running a big campaign calling on Mexico to protect migrants. But we also know that small things can make a big difference."
+  send_socks_2: "On the journey, untreated blisters and infected feet don’t just hurt, they can put your life at risk. Socks can help. Send a pair to a migrants’ shelter now."
+  send_socks_address: |
+    Amnesty socks
+    Address line 1
+    Address line 2
+    S1 2BJ
+  buy_socks_1: "Amnesty International is running a big campaign calling on Mexico to protect migrants. But we also know that small things can make a big difference."
+  buy_socks_2: "On the journey, untreated blisters and infected feet don’t just hurt, they can put your life at risk. Buy a pair of socks online from our headquarters in Mexico (enter cost here tbc) and we will deliver them to a migrants’ shelter for you."
+  buy_socks_tag_text: "Buy a pair of socks online from our office in Mexico (enter cost here tbc) and we will deliver them to a migrants’ shelter for you."     
+  

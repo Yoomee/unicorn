@@ -3,8 +3,8 @@
 
 es:
   site_name: "¿Qué te llevarías?"
-  send_socks: "Manda tus calcetines"
-  buy_socks: "Comprar calcetines"
+  send_socks_button: "Manda tus calcetines"
+  buy_socks_button: "Comprar calcetines"
   share_this: "Compartir"
   find_out_more: "Saber más"
   find_out_more_about: "Sobre el viaje más peligroso en el mundo"
@@ -12,3 +12,5 @@ es:
   tweet: Twittear
   close: Cerrar
   video_id: WDcDOk1cnlA
+  send_socks_1: "Amnesty International esta corriendo un..."
+  

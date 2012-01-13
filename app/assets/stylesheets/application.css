@@ -17,7 +17,7 @@ body {
 }
 
 /*========== re-used styles ==========*/
-#video, #send_and_buy, #find_out_more a  {
+#video, #find_out_more a  {
 	box-shadow: 0px 0px 20px #000;
 	-moz-box-shadow: 0px 0px 20px #000;
 	-webkit-box-shadow: 0px 0px 20px #000;	
@@ -37,20 +37,20 @@ a#amnesty_logo {
 	text-indent: -9000em;
 	display: block;
 	float: left;
-	width: 81px;
-	height: 31px;
-	margin: 40px 0 0 0;
+	width: 120px;
+	height: 50px;
+	margin: 36px 0 0 0;
 	
 }
 #title {
-	margin: 40px 0px 20px 82px;
+	margin: 40px 0px 20px 35px;
 	text-transform: uppercase;
 	background: url(/assets/logo.png) no-repeat 0 0;
 	display: block;
 	text-indent: -9000em;
 	float: left;
-	width: 380px;
-	height: 40px;
+	width: 420px;
+	height: 43px;
 }
 .hl_es #title {
 	background-image: url(/assets/logo.es.png);
@@ -59,8 +59,8 @@ a#amnesty_logo {
 
 
 #language_toggle {
-	float: right;
-	margin-top: 50px;
+	float: left;
+	margin: 50px 0 0 35px;
 }
 
 #language_toggle a {
@@ -102,21 +102,24 @@ a#amnesty_logo {
 	position: absolute;
 	top: 15px;
 	right: 15px;
-	color: #888;
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 /*========== Share this ==========*/
 
 #share_this_wrapper {
-	margin-top: 20px;
+	margin-top: 50px;
   position:relative;
   z-index:5;
 }
 #share_this {
 	width: 100px;
-	height: 160px;
-	background: url(/assets/share_this.png) no-repeat;
-	padding: 80px 0 0 20px;
+	height: 120px;
+	background: #000 url(/assets/share_this.png) no-repeat -5px -5px;
+	padding: 55px 0 0 20px;
   position:absolute;
 	left: -150px;
   z-index:5;
@@ -172,7 +175,7 @@ h2.call_to_action a {
 	display: block;
 	text-indent: -9000em;
 	background: url(/assets/send_and_buy.png) no-repeat 0 0;
-	width: 219px;
+	width: 200px;
 	height: 93px;	
 }
 .hl_es h2.call_to_action a {
@@ -181,7 +184,7 @@ h2.call_to_action a {
 
 h2#buy_socks a {
 	background-position: top right;
-	width: 180px;
+	width: 190px;
 }
 h2#buy_socks a:hover {
 
@@ -233,11 +236,27 @@ h2#buy_socks a:hover {
 div.send_socks_info {
   float: left;
   width: 250px;
-  margin: 160px 0 0 35px;
+  margin: 150px 0 0 35px;
 }
 div.send_socks_info p {
   font-size: 14px;
 }
+
+div.post_socks_address {
+	position: absolute;
+	top: 155px;
+	right: 140px;
+  
+}
+
+div.send_socks_tag {
+  	position: absolute;
+	top: 90px;
+	right: 60px;
+	float: left;
+	width: 170px;
+}
+
 
 /*========== Twitter stream ==========*/
 
@@ -254,7 +273,7 @@ div.send_socks_info p {
 	margin: 0 0 0 13px;
 	text-indent: -9000em;
 	height: 80px;
-	width: 180px;
+	width: 190px;
 	background: url(/assets/tweet_stream_title.png) no-repeat 0 -6px;
 }
 .hl_es #tweet_stream_title {
