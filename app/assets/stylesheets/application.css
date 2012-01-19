@@ -226,9 +226,9 @@ h2#buy_socks a:hover {
 #find_out_more a {
 	display: block;
 	background: url(/assets/find_out_more.jpg) no-repeat 0 0;
-	width: 170px;
+	width: 160px;
 	height: 56px;
-	padding: 37px 90px 0 20px;
+	padding: 37px 100px 0 20px;
 	color: #fff;
 	font-size: 13px;
 	font-weight: normal;
@@ -246,8 +246,16 @@ h2#buy_socks a:hover {
 	background: #fff url(/assets/send_your_socks.jpg);
 	
 }
+.hl_es #send_socks_info {
+	background: #fff url(/assets/send_your_socks.es.jpg);
+	
+}
 #buy_socks_info {
 	background: #fff url(/assets/buy_some_socks.jpg);
+	
+}
+.hl_es #buy_socks_info {
+	background: #fff url(/assets/buy_some_socks.es.jpg);
 	
 }
 .info_box_title {
@@ -256,7 +264,10 @@ h2#buy_socks a:hover {
 div.send_socks_info {
   float: left;
   width: 250px;
-  margin: 150px 0 0 35px;
+  margin: 150px 0 0 30px;
+}
+.hl_es div.send_socks_info {
+  margin: 110px 0 0 16px;
 }
 div.send_socks_info p {
   font-size: 14px;
@@ -280,8 +291,30 @@ div.send_socks_tag {
 	float: left;
 	width: 170px;
 }
+.hl_es div.send_socks_tag {
+  width: 180px;
+}
 
-
+a#buy_btn {
+	display: block;
+	background: url(/assets/buy_btn.png) no-repeat 0 0;
+	text-indent: -9000em;
+	width: 110px;
+	height: 44px;
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+  
+}
+.hl_es a#buy_btn {
+  background: url(/assets/buy_btn.es.png) no-repeat 0 0;
+  width: 180px;
+  height: 34px;
+  bottom: -37px;
+}
+a#buy_btn:hover {
+  -webkit-box-shadow:0px 0px 6px rgba(0,0,0,0.2), 0px 2px 2px rgba(0,0,0,0.2);
+} 
 /*========== Twitter stream ==========*/
 
 #tweet_stream {
