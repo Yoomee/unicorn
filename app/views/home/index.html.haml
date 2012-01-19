@@ -5,7 +5,7 @@
         #video.hide
           %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/#{t :video_id}?enablejsapi=1&wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true, :onload => "iframeOnload();"}
       #send_socks_info.info_box.hide
-        %h3.info_box_title=(t :send_socks)
+        %h3.info_box_title=(t :send_socks_button)
         .send_socks_info
           %p=t :send_socks_1
           %p=t :send_socks_2  
@@ -13,7 +13,7 @@
           %p=t(:send_socks_address).gsub(/\n/,"<br/>").html_safe
         =link_to("#{t :close} x", "#", :class => "close_info_box")
       #buy_socks_info.info_box.hide
-        %h3.info_box_title=(t :send_socks)
+        %h3.info_box_title=(t :buy_socks_button)
         .send_socks_info
           %p=t :buy_socks_1 
           %p=t :buy_socks_2 
