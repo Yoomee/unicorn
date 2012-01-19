@@ -124,6 +124,8 @@ a#amnesty_logo {
 	color: #000;
 	font-weight: bold;
 	text-transform: uppercase;
+	background: #fff;
+	display: block;
 }
 
 /*========== Share this ==========*/
@@ -262,11 +264,13 @@ div.send_socks_info p {
 
 div.post_socks_address {
 	position: absolute;
-	top: 135px;
-	right: 45px;
+	top: 115px;
+	right: 25px;
+	width: 310px;
 }
 div.post_socks_address p {
-  font-size: 12px;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 div.send_socks_tag {
