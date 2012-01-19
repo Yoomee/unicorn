@@ -8,6 +8,24 @@
  *= require_self
 */
 
+/*========== Fonts ==========*/
+
+@font-face {
+    font-family: 'ElloElloNormal';
+    src: url('/assets/elloellonormal-webfont.eot');
+    src: url('/assets/elloellonormal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/elloellonormal-webfont.woff') format('woff'),
+         url('/assets/elloellonormal-webfont.ttf') format('truetype'),
+         url('/assets/elloellonormal-webfont.svg#ElloElloNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.post_socks_address, .send_socks_tag {
+  font-family: 'ElloElloNormal', Arial, sans-serif;
+}
+
+
 body {
 
 
@@ -244,9 +262,11 @@ div.send_socks_info p {
 
 div.post_socks_address {
 	position: absolute;
-	top: 155px;
-	right: 140px;
-  
+	top: 135px;
+	right: 45px;
+}
+div.post_socks_address p {
+  font-size: 12px;
 }
 
 div.send_socks_tag {
