@@ -2,21 +2,35 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
-  site_name: "¿Qué te llevarías?"
-  send_socks_button: "Manda tus calcetines"
-  buy_socks_button: "Comprar calcetines"
-  share_this: "Compartir"
-  find_out_more: "Saber más"
-  find_out_more_about: "Sobre el viaje más peligroso en el mundo"
-  people_sent_socks: "Personas que han enviado los calcetines"
-  tweet: Twittear
+  site_name: "¿Tu qué llevarías?"
+  send_socks_button: "Manda calcetines por tu cuenta"
+  buy_socks_button: "Manda calcetines en línea"
+  share_this: "Comparte esto "
+  find_out_more: "Conoce más"
+  find_out_more_about: "Mira Los Invisibles con Gael García Bernal"
+  people_sent_socks: "Personas que han tomado acción"
+  tweet: Tweetear
   close: Cerrar
   video_id: WDcDOk1cnlA
-  send_socks_1: "Amnesty International esta corriendo un..."
+  send_socks_1: "Amnistía Internacional está realizando una campaña global para pedir a México que proteja a los migrantes. Pero también sabemos que las pequeñas cosas pueden hacer una gran diferencia."
+  send_socks_2: "En el camino, las ampollas y pies infectados sin tratamiento no solamente duelen, sino que pueden poner su vida en peligro. Los calcetines pueden ayudar, envía un par a un albergue de migrantes."
+  send_socks_address: |
+    Capilla-Albergue "Hermanos en el Camino"
+    Movilidad Humana Pastoral de Migrantes
+  
+    Diócesis de Tehuantepec, Oaxaca.
+    Av. Ferrocarril Pte. No.60,
+    Barrio "La Soledad"
+    Ixtepec, Oaxaca, México.
+    C.P. 70110
+  buy_socks_1: "Amnistía Internacional está realizando una campaña global para pedir a México que proteja a los migrantes. Pero también sabemos que las pequeñas cosas pueden hacer una gran diferencia."
+  buy_socks_2: "En el camino, las ampollas y pies infectados sin tratamiento no solamente duelen, sino que pueden poner su vida en peligro. "
+  buy_socks_tag_text: "Compra un par de calcetines en línea desde nuestra oficina en México por un pequeño costo y nosotros los enviaremos a un albergue de migrantes por ti."
+  buy_btn: "Comprar"     
   directed_by: Dirigido por
-  soundtrack: Banda sonora
-  composed_by: Compuesto por
+  soundtrack: Música por
+  composed_by: Compuesta por
   published_by: Publicado por
   in_collaboration_with: En colaboración con
   france: Francia
-  website_by: Sitio por
+  website_by: Sitio de Internet por
