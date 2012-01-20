@@ -6,7 +6,13 @@ $(document).ready ->
     InfoBox.showBuySocks()    
   $('.info_box a.close_info_box').click ->
     InfoBox.hideAll()
-
+  $('#header_content').delay(500).fadeIn 1000, ->
+    $('#send_socks').fadeIn 500
+    $('#buy_socks').delay(400).fadeIn 500
+    $('#find_out_more').delay(800).fadeIn 500, ->
+      $('#tweet_stream_content').fadeIn 1000, ->
+        $('#footer').fadeIn 1000
+    
 InfoBox =
   hideAll: ->
     $('.info_box:visible').fadeOut 100, ->
@@ -40,3 +46,15 @@ window.Tweets =
     $('#all_tweets').animate {left: "-=#{Tweets.tweetWidth}"}, 500, ->
       $('#all_tweets').append($('.tweet:first').detach()).css('left', 0)
       Tweets.resetInterval()
+
+Animations= 
+  videoVisible: false
+  fadeInVideo: ->
+    if !Animations.videoVisible
+      Animations.videoVisible = true
+      $('#video').fadeIn 1500, => 
+        $('#share_this').show().animate({left: '-20px'},'slow')
+
+root = exports ? this
+root.onYouTubePlayerReady = (playerId) -> Animations.fadeInVideo()
+root.iframeOnload = -> setTimeout("onYouTubePlayerReady()", 2000)

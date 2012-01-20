@@ -49,6 +49,10 @@ body {
 
 #header {
 	margin-bottom: 15px;
+	height: 105px;
+}
+#header_content {
+  display:none;
 }
 a#amnesty_logo {
 	background: url(/assets/amnesty_logo.png) no-repeat 0 0;
@@ -182,12 +186,11 @@ a#amnesty_logo {
 
 #calls_to_action {
 	margin-bottom: 30px;
+	height:95px;
 }
-
 .call_to_action {
 	float: left;
 	display: block;
-
 }
 
 h2.call_to_action a {
@@ -209,8 +212,8 @@ h2#buy_socks a {
 h2#buy_socks a:hover {
 
 }
-#send_socks {
-	
+#send_socks, #buy_socks, #find_out_more {
+	display:none;
 }
 
 #buy_socks h2 {
@@ -320,6 +323,10 @@ a#buy_btn:hover {
 #tweet_stream {
 	background: #57544F url(/assets/tweets_bg.jpg) no-repeat top center;
 	padding: 12px 0px 12px;
+	height:80px;
+}
+#tweet_stream_content {
+  display:none;
 }
 #tweet_stream .row {
   position: relative;
@@ -339,36 +346,54 @@ a#buy_btn:hover {
 #tweet_window {
   float: left;
   overflow: hidden;
-  height: 65px;
+  height: 80px;
   position: relative;
 }
 #all_tweets {
   position: absolute;
-  height: 65px;
+  height: 80px;
   width: 2000px;
 }
 #next_tweet {
-  background: url(/assets/arrow.png);
+/*  background: url(/assets/arrow.png);
   text-indent: -9999em;
   width: 9px;
   height: 16px;
   position: absolute;
   top: 25px;
-  right: 90px;
+  right: 90px;*/
+  
+  background: url(/assets/arrow.png) no-repeat;
+  text-indent: -9999em;
+  width: 161px;
+  height: 104px;
+  position: absolute;
+  top: -12px;
+  right: -41px;
 }
+
 .tweet {
 	margin: 5px 0 0 0;
 	padding-right: 20px;
 	float: left;
 }
+.tweet a{
+  color:#fff;
+}
+.tweet a:hover{
+  text-decoration:none;
+}
+.tweet a:hover .twitter_username{
+  text-decoration:underline;
+}
 .twitter_profile_image {
 	float: left;
-	margin: 4px 10px 0 0;
+	margin: 4px 10px 100px 0;
+	width:48px;
+	height:48px;
 }
-a.twitter_username {
-	color: #fff;
+span.twitter_username {
 	font-weight: bold;
-	
 }
 
 /*========== Footer ==========*/
@@ -378,10 +403,12 @@ a.twitter_username {
 	padding-bottom: 70px;
 	color: #898e8f;
 	font-size: 12px;
+  display:none;
 }
 #footer a {
 	color: #898e8f;
 }
+
 a#amnesty_footer_logo {
 	display: block;
 	float: left;

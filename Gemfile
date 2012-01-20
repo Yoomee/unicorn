@@ -7,6 +7,7 @@ gem 'xml-simple'
 gem 'json'
 gem 'jquery-rails'
 gem 'will_paginate'
+gem 'httparty'
 
 group :production do
   #gem 'pg'

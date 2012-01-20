@@ -31,7 +31,7 @@
             %li=google_share
 
   .row#calls_to_action
-    #send_and_buy.span7.offset2    
+    #send_and_buy.span7.offset2
       %h2#send_socks.call_to_action
         =link_to (t :send_socks_button), "javascript:void(0)"
       %h2#buy_socks.call_to_action
@@ -43,27 +43,17 @@
             =t :find_out_more
           =t :find_out_more_about
 #tweet_stream
-  .container
+  .container#tweet_stream_content
     .row
       .span4.offset2
         %h2#tweet_stream_title
           =t :people_sent_socks
-      #tweet_window.span8
+      #tweet_window.span9
         #all_tweets
-          .tweet.span4
-            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-            =link_to "richwells", "javascript:void(0)", :class=>"twitter_username"
-            I just sent some socks to Mexico and I think you should too
-          .tweet.span4
-            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-            =link_to "matkins", "javascript:void(0)", :class=>"twitter_username"
-            I just sent some socks to Mexico and I think you should too
-          .tweet.span4
-            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-            =link_to "richwells", "javascript:void(0)", :class=>"twitter_username"
-            I just sent some socks to Mexico and I think you should too
-          .tweet.span4
-            =image_tag "twitter_profile_image.jpg", :class=>"twitter_profile_image"
-            =link_to "matkins", "javascript:void(0)", :class=>"twitter_username"
-            I just sent some socks to Mexico and I think you should too
+          -@tweets.each do |tweet|
+            .tweet.span5
+              =link_to "http://twitter.com/#{tweet["from_user"]}/status/#{tweet["id_str"]}", :target => '_blank' do
+                =image_tag tweet["profile_image_url"], :class=>"twitter_profile_image"
+                %span.twitter_username=tweet["from_user"]
+                =tweet["text"]
       =link_to(">", "javascript:void(0)", :id => "next_tweet")
