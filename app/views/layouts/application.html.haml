@@ -15,8 +15,8 @@
           =link_to "Amnesty International", "http://www.amnesty.org/", :target=>"_blank", :id=>"amnesty_logo"
           #title=t(:site_name)
           #language_toggle
-            =link_to("ENG", "/", :class => "#{'active' if I18n.locale != :es}")
-            =link_to("ESP", "/?hl=es", :class => "#{'active' if I18n.locale == :es}")
+            =link_to("ENG", "http://sendsocks.org", :class => "#{'active' if I18n.locale != :es}")
+            =link_to("ESP", "http://mandacalcetines.org", :class => "#{'active' if I18n.locale == :es}")
     =yield
     .container
       #footer.row
