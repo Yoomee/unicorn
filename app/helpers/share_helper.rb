@@ -34,7 +34,7 @@ module ShareHelper
   # Buttons
   def facebook_share 
     #content_tag(:div, nil, :class => 'fb-like', :"data-send" => false, :"data-layout" => "button_count", :"data-width" => "90", :"data-show-faces" => false)
-    link_to("Share", "http://www.facebook.com/sharer.php?u=#{t(:site_url)}", :onclick => "window.open(this.href, 'name', 'toolbar=0,status=0,menubar=0,height=400,width=600,top=' + ((screen.height/2)-200) + ',left=' + ((screen.width/2)-300));return false;")
+    link_to(image_tag('fb_share.png'), "http://www.facebook.com/sharer.php?u=#{t(:site_url)}", :onclick => "window.open(this.href, 'name', 'toolbar=0,status=0,menubar=0,height=400,width=600,top=' + ((screen.height/2)-200) + ',left=' + ((screen.width/2)-300));return false;", :class => 'fb-like')
   end
   
   def google_share
