@@ -11,6 +11,8 @@
           %p=t :send_socks_2  
         .post_socks_address
           %p=t(:send_socks_address).gsub(/\n/,"<br/>").html_safe
+        .post_socks_share
+          =twitter_share(t(:twitter_sent_socks_text))
         =link_to("#{t :close} x", "#", :class => "close_info_box")
       #buy_socks_info.info_box.hide
         %h3.info_box_title=(t :buy_socks_button)
@@ -20,13 +22,15 @@
         .send_socks_tag
           %p=t :buy_socks_tag_text 
           =link_to("#{t :buy_btn}", "http://yoomee.com", :id => "buy_btn")
+        .send_socks_share
+          =twitter_share(t(:twitter_sent_socks_text))
         =link_to("#{t :close} x", "javascript:void(0)", :class => "close_info_box")
     .span2
       #share_this_wrapper
         #share_this.hide
           %h3=t :share_this
           %ul.unstyled
-            %li=twitter_share
+            %li=twitter_share(t(:twitter_share_site_text))
             %li=facebook_share
             %li=google_share
 

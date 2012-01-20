@@ -4,6 +4,13 @@
     %title=t(:site_name)
     = csrf_meta_tag
     = favicon_link_tag
+    %meta{:property => "og:url", :content => t(:site_url)}
+    %meta{:property => "og:title", :content => t(:site_name)}
+    %meta{:property => "og:site_name", :content => t(:site_name)}
+    %meta{:property => "og:type", :content => "non_profit"}
+    %meta{:property => "og:video", :content => "http://www.youtube.com/v/#{t :video_id}?version=3&amp;autohide=1"}
+    %meta{:property => "og:video:width", :content => "398"}
+    %meta{:property => "og:video:height", :content => "224"}
     = javascript_include_tag "application"
     = stylesheet_link_tag "application"
     =yield :head

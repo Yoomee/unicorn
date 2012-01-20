@@ -3,6 +3,12 @@
 
 es:
   site_name: "¿Tu qué llevarías?"
+  site_url: "mandacalcetines.org"
+  video_id: tIktpVMWp1w
+  hash_tag: calcetines # Be sure to change this in twitter_share_site_text too!
+  twitter_share_site_text: "Mira este nuevo corto provocador de @amnistiaonline y manda #calcetines a un migrante ya! http://mandacalcetines.org"
+  twitter_sent_socks_text: "Acabo de mandar un par de #calcetines a un migrante en #México. Por qué no lo haces tu también? http://mandacalcetines.org"
+  amnesty_twitter: amnestyonline
   send_socks_button: "Manda calcetines por tu cuenta"
   buy_socks_button: "Manda calcetines en línea"
   share_this: "Comparte esto "
@@ -11,8 +17,6 @@ es:
   people_sent_socks: "Personas que han tomado acción"
   tweet: Tweetear
   close: Cerrar
-  video_id: tIktpVMWp1w
-  hash_tag: amnistia
   send_socks_1: "Amnistía Internacional está realizando una campaña global para pedir a México que proteja a los migrantes. Pero también sabemos que las pequeñas cosas pueden hacer una gran diferencia."
   send_socks_2: "En el camino, las ampollas y pies infectados sin tratamiento no solamente duelen, sino que pueden poner su vida en peligro. Los calcetines pueden ayudar, envía un par a un albergue de migrantes."
   send_socks_address: |

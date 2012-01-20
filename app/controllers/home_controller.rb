@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   private
   def fetch_tweets
     @tweets = Rails.cache.fetch("tweets_#{I18n.locale}", :expires_in => 30.minutes) do
-      Twitter.search("##{t(:hash_tag)}")["results"]
+      Twitter.search("##{t(:hash_tag)}")
     end
   end
 end

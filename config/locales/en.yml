@@ -3,6 +3,12 @@
 
 en:
   site_name: "What would you take?"
+  site_url: "sendsocks.org"
+  video_id: JicBce4mvV0
+  hash_tag: socks # Be sure to change this in twitter_share_site_text too!
+  twitter_share_site_text: "Check out this provocative new film by @amnestyonline and send #socks to a migrant now! http://sendsocks.org"
+  twitter_sent_socks_text: "I just sent a pair of #socks to a migrant in #Mexico. I think you should too! http://sendsocks.org"
+  amnesty_twitter: amnestyonline
   send_socks_button: "Post socks myself"
   buy_socks_button: "Send socks online"
   share_this: "Share this"
@@ -11,8 +17,6 @@ en:
   people_sent_socks: "People who have sent socks"
   tweet: Tweet
   close: Close
-  video_id: JicBce4mvV0
-  hash_tag: amnesty
   send_socks_1: "Amnesty International is running a big campaign calling on Mexico to protect migrants. But we also know that small things can make a big difference."
   send_socks_2: "On the journey, untreated blisters and infected feet don’t just hurt, they can put lives at risk. Socks can help. Send a pair to a migrants’ shelter now."
   send_socks_address: |
