@@ -12,6 +12,7 @@
         .post_socks_address
           %p=t(:send_socks_address).gsub(/\n/,"<br/>").html_safe
         .post_socks_share
+          =facebook_share
           =twitter_share(t(:twitter_sent_socks_text))
         =link_to("#{t :close} x", "#", :class => "close_info_box")
       #buy_socks_info.info_box.hide
@@ -21,10 +22,15 @@
           %p=t :buy_socks_2 
         .send_socks_tag
           %p=t :buy_socks_tag_text 
-          =link_to("#{t :buy_btn}", "http://yoomee.com", :id => "buy_btn")
+          =link_to("#{t :buy_btn}", "#", :id => "buy_btn")
         .send_socks_share
+          =facebook_share
           =twitter_share(t(:twitter_sent_socks_text))
         =link_to("#{t :close} x", "javascript:void(0)", :class => "close_info_box")
+      #buy_socks_iframe.info_box.hide
+        %iframe{:width => '660',  :height => 395, :src => t(:buy_socks_iframe_url), :frameborder => 0, :allowtransparency => true, :scrolling => 'no'}      
+        =link_to("#{t :close} x", "javascript:void(0)", :class => "close_info_box")
+        
     .span2
       #share_this_wrapper
         #share_this.hide

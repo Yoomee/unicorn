@@ -28,7 +28,7 @@ module ShareHelper
   end
   
   def sharing_js
-    google_js + facebook_js
+    google_js #+ facebook_js  Using image only
   end
   
   # Buttons

@@ -3,7 +3,10 @@ $(document).ready ->
   $('#send_socks a').click ->
     InfoBox.showSendSocks()
   $('#buy_socks a').click ->
-    InfoBox.showBuySocks()    
+    InfoBox.showBuySocks()
+  $('#buy_btn').click ->
+    event.preventDefault()
+    InfoBox.showBuySocksIframe()
   $('.info_box a.close_info_box').click ->
     InfoBox.hideAll()
   $('#header_content').delay(500).fadeIn 1000, ->
@@ -23,6 +26,9 @@ InfoBox =
     else
       $('#video_wrapper:visible, .info_box:visible').fadeOut 100, ->
         $('#buy_socks_info').fadeIn(300)
+  showBuySocksIframe: ->
+    $('#video_wrapper:visible, .info_box:visible').fadeOut 100, ->
+      $('#buy_socks_iframe').fadeIn(300)
   showSendSocks: ->
     if $('#send_socks_info').is(':visible')
       InfoBox.hideAll()
@@ -32,12 +38,14 @@ InfoBox =
 
 window.Tweets =
   init: ->
-    Tweets.tweetWidth = $('.tweet').outerWidth()
-    $('#all_tweets').css('width', Tweets.tweetWidth * $('.tweet').length)
-    Tweets.resetInterval()
-    $('#next_tweet').click (event) ->
-      event.preventDefault()
-      Tweets.next()
+    if $('.tweet').length > 1
+      Tweets.tweetWidth = $('.tweet').outerWidth()
+      $('#all_tweets').css('width', Tweets.tweetWidth * $('.tweet').length)
+      Tweets.resetInterval()
+      $('#next_tweet').show()
+      $('#next_tweet').click (event) ->
+        event.preventDefault()
+        Tweets.next()
   resetInterval: ->
     if Tweets.interval != undefined
       window.clearInterval(Tweets.interval)

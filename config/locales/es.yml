@@ -7,11 +7,12 @@ es:
   video_id: tIktpVMWp1w
   video_still_url: "http://i1.ytimg.com/vi/tIktpVMWp1w/hqdefault.jpg"
   hash_tag: mandacalcetines # Be sure to change this in twitter_share_site_text too!
-  twitter_share_site_text: "Mira este nuevo corto provocador de @amnistiaonline y #mandacalcetines a un migrante ya! http://mandacalcetines.org"
-  twitter_sent_socks_text: "Acabo de mandar un par de calcetines a un migrante en #México. Por qué no lo haces tu también? http://mandacalcetines.org #mandacalcetines"
+  twitter_share_site_text: "Mira este nuevo corto provocador de @amnistiaonline y #mandacalcetines a un migrante ya!"
+  twitter_sent_socks_text: "Acabo de mandar un par de calcetines a un migrante en #México. Por qué no lo haces tu también? #mandacalcetines"
   amnesty_twitter: amnestyonline
   send_socks_button: "Manda calcetines por tu cuenta"
   buy_socks_button: "Manda calcetines en línea"
+  buy_socks_iframe_url: https://www.amnistia.org.mx/regalos/calcetinespago.php
   share_this: "Comparte esto "
   find_out_more: "Conoce más"
   find_out_more_about: "Mira Los Invisibles con Gael García Bernal"
