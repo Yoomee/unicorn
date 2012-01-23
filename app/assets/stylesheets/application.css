@@ -29,8 +29,9 @@
 body {
 
 
-/*  background-color:black;*/
+  background-color:black;
 	background: #000 url(/assets/bg.jpg) repeat-x top center;
+	min-height:955px;
 	color: white;
 }
 
@@ -339,9 +340,10 @@ a#buy_btn:hover {
 /*========== Twitter stream ==========*/
 
 #tweet_stream {
-	background: #57544F url(/assets/tweets_bg.jpg) no-repeat top center;
-	padding: 12px 0px 12px;
-	height:80px;
+	background: #57544F url(/assets/tweets_bg.jpg) no-repeat 50% -52px;
+	height:0px;
+	margin:52px 0px;
+	opacity:0;
 }
 #tweet_stream_content {
   display:none;
