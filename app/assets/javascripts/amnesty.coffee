@@ -1,16 +1,16 @@
 $(document).ready ->
   Tweets.init()
-  $('#send_socks a').click ->
-    #event.preventDefault()
+  $('#send_socks a').click (event) ->
+    event.preventDefault()
     InfoBox.showSendSocks()
-  $('#buy_socks a').click ->
-    #event.preventDefault()
+  $('#buy_socks a').click (event) ->
+    event.preventDefault()
     InfoBox.showBuySocks()
-  $('#buy_btn').click ->
-    #event.preventDefault()
+  $('#buy_btn').click (event) ->
+    event.preventDefault()
     InfoBox.showBuySocksIframe()
-  $('.info_box a.close_info_box').click ->
-    #event.preventDefault()
+  $('.info_box a.close_info_box').click (event) ->
+    event.preventDefault()
     InfoBox.hideAll()
   $('#header_content').delay(500).fadeIn 1000, ->
     $('#send_socks').fadeIn 500
@@ -48,7 +48,7 @@ window.Tweets =
       Tweets.resetInterval()
       $('#next_tweet').show()
       $('#next_tweet').click (event) ->
-        #event.preventDefault()
+        event.preventDefault()
         Tweets.next()
   resetInterval: ->
     if Tweets.interval != undefined
@@ -64,7 +64,7 @@ Animations=
   fadeInVideo: ->
     if !Animations.videoVisible
       Animations.videoVisible = true
-      $('#video').fadeIn 1500, => 
+      $('#video').animate {opacity:1}, 1500, => 
         $('#share_this').show().animate({left: '-20px'},'slow')
 
 root = exports ? this

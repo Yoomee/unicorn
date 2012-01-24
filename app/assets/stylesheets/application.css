@@ -63,7 +63,6 @@ a#amnesty_logo {
 	width: 120px;
 	height: 50px;
 	margin: 36px 0 0 0;
-	
 }
 #title {
 	margin: 40px 0px 20px 35px;
@@ -292,6 +291,9 @@ div.send_socks_info p {
   position: absolute;
   bottom: 73px;
   right: 60px;
+}
+.hl_es .send_socks_share {  
+  bottom: 65px;
 }
 .post_socks_share {
   position: absolute;
