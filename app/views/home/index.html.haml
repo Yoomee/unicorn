@@ -3,7 +3,7 @@
     .span12.offset2
       #video_wrapper
         #video.hide
-          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/#{t :video_id}?enablejsapi=1&wmode=opaque&version=3&autohide=1&showinfo=0", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true, :onload => "iframeOnload();"}
+          %iframe{:width => 700,  :height => 395, :src => "http://www.youtube.com/embed/#{t :video_id}?enablejsapi=1&wmode=opaque&version=3&autohide=1&showinfo=0&modestbranding=1&rel=0&fs=1", :frameborder => 0, :allowfullscreen => true, :allowtransparency => true, :onload => "iframeOnload();"}
       #send_socks_info.info_box.hide
         %h3.info_box_title=(t :send_socks_button)
         .send_socks_info
