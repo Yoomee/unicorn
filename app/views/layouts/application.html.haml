@@ -28,6 +28,12 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    %noscript
+      :css
+        #header_content,#video,#share_this,#send_socks,#buy_socks,#find_out_more,#tweet_stream_content,#footer{display:block;}
+        #share_this{left: -20px;}
+        #tweet_stream{margin: 0px;padding:12px 0px;height:80px;opacity:1}
+          
   %body{:class => "hl_#{I18n.locale}"}
     =sharing_js
     .container
@@ -63,6 +69,6 @@
           %p
             =t :website_by
             %br
-            =link_to "Yoomee", "#", :id=>"yoomee_logo", :target=>"_blank"          
+            =link_to "Yoomee", "http://www.yoomee.com", :id=>"yoomee_logo", :target=>"_blank"          
           
     #fb-root

@@ -113,6 +113,9 @@ a#amnesty_logo {
   position:relative;
   z-index:10;
 }
+#video {
+  height: 395px;
+}
 .info_box {
 	padding: 20px;
 	height: 355px;
