@@ -16,7 +16,7 @@ $(document).ready ->
     $('#send_socks').fadeIn 500
     $('#buy_socks').delay(400).fadeIn 500
     $('#find_out_more').delay(800).fadeIn 500, ->
-      $('#tweet_stream_bg').animate {'margin-top':0, 'margin-bottom':0, height:80,'padding-top':12,'padding-bottom':12,'background-position-y':0,opacity:1}, 'slow', ->
+      $('#tweet_stream').animate {'margin-top':0, 'margin-bottom':0, height:80,'padding-top':12,'padding-bottom':12,'background-position-y':0,opacity:1}, 'slow', ->
         $('#tweet_stream_content').fadeIn 1000, ->
           $('#footer').fadeIn 1000
     
