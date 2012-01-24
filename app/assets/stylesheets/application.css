@@ -114,6 +114,8 @@ a#amnesty_logo {
 }
 #video {
   height: 395px;
+/*  visibility:hidden;
+  opacity:0;*/
 }
 .info_box {
 	padding: 20px;

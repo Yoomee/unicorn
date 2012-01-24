@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def param(name,value)
-    content_tag(:param, nil, :name => name, :value => value)
+  def param_tag(name,value)
+    "<param name=\"#{name}\" value=\"#{value}\"></param>".html_safe
   end
   
   def youtube_url

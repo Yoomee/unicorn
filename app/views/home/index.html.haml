@@ -2,11 +2,11 @@
   .row
     .span12.offset2
       #video_wrapper
-        #video{:style => "opacity:0"}
+        #video
           %object{:width => 700, :height => 395}
-            =param('movie',youtube_url)
-            =param('allowFullScreen','true')
-            =param('allowscriptaccess','always')
+            =param_tag('movie',youtube_url)            
+            =param_tag('allowFullScreen','true')
+            =param_tag('allowscriptaccess','always')
             %embed{:src => youtube_url, :type => "application/x-shockwave-flash", :width => 700, :height => 395, :allowFullScreen => 'true', :allowscriptaccess => 'always'}            
       #send_socks_info.info_box.hide
         %h3.info_box_title=(t :send_socks_button)

@@ -64,6 +64,7 @@ Animations=
   fadeInVideo: ->
     if !Animations.videoVisible
       Animations.videoVisible = true
+      $('#video').css('visibility','visible')
       $('#video').animate {opacity:1}, 1500, => 
         $('#share_this').show().animate({left: '-20px'},'slow')
 
