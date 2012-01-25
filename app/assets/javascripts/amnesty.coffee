@@ -19,12 +19,16 @@ $(document).ready ->
   setTimeout("Animations.tweetStream()", 2800)
   setTimeout("Animations.tweetStreamContent()", 3400)
   setTimeout("Animations.footer()", 4400)
-  
-    #   $('#tweet_stream').animate {'margin-top':0, 'margin-bottom':0, height:80,'padding-top':12,'padding-bottom':12,'background-position-y':0,opacity:1}, 'slow', ->
-    #     $('#tweet_stream_content').fadeIn 1000, ->
-    #       $('#footer').fadeIn 1000
 
-Animations= 
+Animations=
+  all: ->
+    $('#header_content').delay(500).fadeIn 1000, ->
+      $('#send_socks').fadeIn 500
+      $('#buy_socks').delay(400).fadeIn 500
+      $('#find_out_more').delay(800).fadeIn 500, ->
+        $('#tweet_stream').animate {'margin-top':0, 'margin-bottom':0, height:80,'padding-top':12,'padding-bottom':12,'background-position-y':0,opacity:1}, 'slow', ->
+          $('#tweet_stream_content').fadeIn 1000, ->
+            $('#footer').fadeIn 1000
   header: ->
     $('#header_content').fadeIn 1000
   sendSocks: ->
@@ -44,7 +48,16 @@ Animations=
     if !Animations.videoVisible
       Animations.videoVisible = true
       $('#video').animate {opacity:1}, 2000, => 
+        Animations.loadgplus()
         $('#share_this').show().animate({left: '-20px'},'slow')
+  loadgplus: ->
+    `(function(d, t) {
+    var g = d.createElement(t),
+    	s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = 'https://apis.google.com/js/plusone.js';
+    s.parentNode.insertBefore(g, s);
+    })(document, 'script');`
 
     
 InfoBox =
