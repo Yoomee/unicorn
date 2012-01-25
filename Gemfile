@@ -7,9 +7,11 @@ gem 'xml-simple'
 gem 'json'
 gem 'jquery-rails'
 gem 'will_paginate'
+gem 'httparty'
 
 group :production do
-  gem 'pg'
+  #gem 'pg'
+  gem 'mysql2'
 end
 
 group :development do

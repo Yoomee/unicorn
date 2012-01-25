@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
   
   private
   def set_locale
-    I18n.locale = params[:hl] || I18n.default_locale
+    if (request.host =~ /mandacalcetines\.org/) || params[:hl] == "es"
+      I18n.locale = :es
+    else
+      I18n.locale = :en
+    end
   end
 end

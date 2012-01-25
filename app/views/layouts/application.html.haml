@@ -4,28 +4,57 @@
     %title=t(:site_name)
     = csrf_meta_tag
     = favicon_link_tag
+    %meta{:property => "og:url", :content => t(:site_url)}
+    %meta{:property => "og:title", :content => t(:site_name)}
+    %meta{:property => "og:site_name", :content => t(:site_name)}
+    %meta{:property => "og:type", :content => "non_profit"}
+    -if false #TODO uncomment when videos are on correct channel
+      %meta{:property => "og:image", :content => t(:video_still_url)}
+      %meta{:property => "og:video", :content => "http://www.youtube.com/v/#{t :video_id}?version=3&amp;autohide=1"}
+      %meta{:property => "og:description", :content => ""}
+      %meta{:property => "og:video:width", :content => "398"}
+      %meta{:property => "og:video:height", :content => "224"}
     = javascript_include_tag "application"
     = stylesheet_link_tag "application"
     =yield :head
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28549040-1']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    %noscript
+      :css
+        #header_content,#video,#share_this,#send_socks,#buy_socks,#find_out_more,#tweet_stream_content,#footer{display:block;}
+        #share_this{left: -20px;}
+        #tweet_stream{margin: 0px;padding:12px 0px;height:80px;opacity:1}
+        #video {visibility:visible;opacity:1;}
+          
   %body{:class => "hl_#{I18n.locale}"}
-    =sharing_js
     .container
       .row#header
-        .span14.offset2
+        #header_content.span14.offset2
           =link_to "Amnesty International", "http://www.amnesty.org/", :target=>"_blank", :id=>"amnesty_logo"
           #title=t(:site_name)
           #language_toggle
-            =link_to("ENG", "/", :class => "#{'active' if I18n.locale != :es}")
-            =link_to("ESP", "/?hl=es", :class => "#{'active' if I18n.locale == :es}")
+            =link_to("ENG", "http://sendsocks.org", :class => "#{'active' if I18n.locale != :es}")
+            =link_to("ESP", "http://mandacalcetines.org", :class => "#{'active' if I18n.locale == :es}")
     =yield
+    =#sharing_js
     .container
       #footer.row
         .span2.offset3
           %p
             =t :directed_by
+            %br
             %strong
               =link_to "Marc Silver", "http://www.marcsilver.net/", :id=>"yoomee_footer_logo", :target=>"_blank"
-        .span4
+        .span5
           %p
             =t :soundtrack
             %br
@@ -38,10 +67,10 @@
             ="#{t :published_by}:"
             Métisse Music,
             =t :france
-        .span3.offset3
+        .span3.offset2
           %p
             =t :website_by
             %br
-            =link_to "Yoomee", "#", :id=>"yoomee_logo", :target=>"_blank"          
+            =link_to "Yoomee", "http://www.yoomee.com", :id=>"yoomee_logo", :target=>"_blank"          
           
     #fb-root
