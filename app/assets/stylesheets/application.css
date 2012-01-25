@@ -101,6 +101,10 @@ a#amnesty_logo {
 }
 
 /*========== Video ==========*/
+#video_row {
+  height:425px;
+  overflow:hidden;
+}
 
 #video_wrapper, 
 .info_box {
