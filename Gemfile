@@ -10,8 +10,7 @@ gem 'will_paginate'
 gem 'httparty'
 
 group :production do
-  #gem 'pg'
-  gem 'mysql2'
+  gem 'pg'
 end
 
 group :development do

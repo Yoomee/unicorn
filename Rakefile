@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Amnesty::Application.load_tasks
+Unicorn::Application.load_tasks
