@@ -7,7 +7,7 @@ class ApisController < ApplicationController
   private
   def get_venues
     
-    @tweets = Rails.cache.fetch("venues", :expires_in => 1.minute) do
+    @tweets = Rails.cache.fetch("venues", :expires_in => 10.minutes) do
       #Sheff  "53.3933,-1.4452","53.3625,-1.5123"
       #Austin "30.321, -97.713","30.241, -97.761"
 
