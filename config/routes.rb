@@ -2,6 +2,8 @@ Unicorn::Application.routes.draw do
   root :to => 'home#index'
   
   resource :api
+  
+  match 'faq' => 'home#faq'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
