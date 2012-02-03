@@ -1,7 +1,7 @@
 class ApisController < ApplicationController
   def show
     get_venues
-    render :json => @venues.to_json
+    render :json => {:venues => @venues.to_json}
   end
   
   private
