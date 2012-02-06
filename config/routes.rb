@@ -3,7 +3,7 @@ Unicorn::Application.routes.draw do
   
   resource :api
   
-  match 'faq' => 'home#faq'
+  match 'magic' => 'home#faq'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
