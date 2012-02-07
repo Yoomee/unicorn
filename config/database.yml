@@ -8,7 +8,7 @@ development:
   username: root
   host: localhost
   password: ''
-  database: amnesty_development
+  database: unicorn_development
   pool: 5
   timeout: 5000
 
