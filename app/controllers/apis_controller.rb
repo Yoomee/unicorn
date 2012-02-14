@@ -1,9 +1,9 @@
 class ApisController < ApplicationController
-  #before_filter :get_venues
+  before_filter :get_venues
   before_filter :log_user
   def show
-    #render :json => {:venues => @venues, :message =>  {:text => "Welcome to the Unicorn tracker!", :button_text => "Let's go", :button_hidden => false, :id => 1}}
-    render :json => File.read(File.join(Rails.root, "lib", "venues.json"))
+    render :json => {:venues => @venues, :message =>  {:text => "Welcome to the Unicorn tracker!", :button_text => "Let's go", :button_hidden => false, :id => 1}}
+    #render :json => File.read(File.join(Rails.root, "lib", "venues.json"))
   end
   
   private
