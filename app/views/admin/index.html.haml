@@ -14,6 +14,7 @@
       %th App Version
       %th IP Address
       %th Lat, Lng
+      %th Created
   %tbody
     -@app_users.each do |app_user|
       %tr
@@ -24,3 +25,4 @@
         %td
           -if (lat_lng = app_user.api_call_logs.collect{|l| [l.lat,l.lng] if !l.lat.to_i.zero? && !l.lng.to_i.zero?}.compact.first.try(:join,', ')).present?
             =link_to(lat_lng, "http://maps.google.com/maps?q=loc:#{lat_lng}", :target => '_blank')
+        %td=app_user.created_at
