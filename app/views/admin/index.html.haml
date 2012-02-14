@@ -1,0 +1,26 @@
+%br
+%h2 Stats
+%dl
+  %dt Total users
+  %dd=@app_users.count
+  %dt Total api calls
+  %dd=ApiCallLog.all.count
+%h2 Users
+%table.table.table-bordered.table-striped.table-condensed
+  %thead
+    %tr
+      %th UUID
+      %th Api Calls
+      %th App Version
+      %th IP Address
+      %th Lat, Lng
+  %tbody
+    -@app_users.each do |app_user|
+      %tr
+        %td=app_user.uuid
+        %td=app_user.api_call_logs.count
+        %td=app_user.api_call_logs.collect(&:app_version).uniq.join(', ')
+        %td=app_user.api_call_logs.collect(&:ip_address).first
+        %td
+          -if (lat_lng = app_user.api_call_logs.collect{|l| [l.lat,l.lng] if !l.lat.to_i.zero? && !l.lng.to_i.zero?}.compact.first.try(:join,', ')).present?
+            =link_to(lat_lng, "http://maps.google.com/maps?q=loc:#{lat_lng}", :target => '_blank')
