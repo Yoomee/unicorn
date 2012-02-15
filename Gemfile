@@ -8,6 +8,7 @@ gem 'json'
 gem 'jquery-rails'
 gem 'will_paginate'
 gem 'httparty'
+gem 'geoip'
 
 group :production do
   gem 'pg'
