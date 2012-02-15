@@ -1,4 +1,5 @@
 require 'resolv'
+require 'iconv'
 GEO_IP_DB = File.join(Rails.root,"lib/GeoLiteCity.dat")
 
 class ApiCallLog < ActiveRecord::Base
@@ -14,8 +15,8 @@ class ApiCallLog < ActiveRecord::Base
     return true unless (File.exists?(GEO_IP_DB) && ip_address =~ /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/)
     res = GeoIP.new(GEO_IP_DB).city(ip_address)
     if res
-      self.ip_city = res.city_name
-      self.ip_country = res.country_name
+      self.ip_city = Iconv.conv("UTF-8//IGNORE", "US-ASCII", res.city_name)
+      self.ip_country = Iconv.conv("UTF-8//IGNORE", "US-ASCII", res.country_name)
       self.ip_lat = res.latitude
       self.ip_lng = res.longitude
     end

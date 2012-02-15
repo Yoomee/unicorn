@@ -21,7 +21,10 @@
         %td=truncate(app_user.uuid,:length => 11)
         %td=app_user.api_call_logs.count
         %td=app_user.api_call_logs.collect(&:app_version).uniq.join(', ')
-        %td=app_user.api_call_logs.last.ip_location
+        %td
+          -ip_lat_lng = [app_user.api_call_logs.last.ip_lat, app_user.api_call_logs.last.ip_lng]
+          -if !ip_lat_lng.all?{|l| l.to_i.zero?}
+            =link_to(app_user.api_call_logs.last.ip_location, "http://maps.google.com/maps?q=loc:#{ip_lat_lng[0]},#{ip_lat_lng[1]}(#{u app_user.api_call_logs.last.ip_location})&z=7", :target => '_blank')
         %td
           -lat_lng = [app_user.api_call_logs.last.lat, app_user.api_call_logs.last.lng]
           -if !lat_lng.all?{|l| l.to_i.zero?}
