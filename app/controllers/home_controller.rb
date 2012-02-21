@@ -8,6 +8,6 @@ class HomeController < ApplicationController
   
   private
   def redirect_to_twitter
-    redirect_to "https://twitter.com/sxswunicorn"
+    redirect_to "https://twitter.com/sxswunicorn" if Rails.env.production?
   end
 end

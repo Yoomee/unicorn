@@ -1,3 +1,5 @@
+/* @override http://localhost:3000/assets/application.css?body=1 */
+
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
@@ -5,4 +7,230 @@
  *= require_tree . 
  *= require_self
 */
+
+/*CSS3 magic*/
+
+@-webkit-keyframes reset {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+}
+ 
+@-webkit-keyframes fade_in {
+0% {
+    opacity: 0;
+}
+60% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+.fade_in {
+    -webkit-animation-name: reset, fade_in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
+}
+ 
+.fade_in.fade_one {-webkit-animation-delay: 0, 0;}
+.fade_in.fade_two {-webkit-animation-delay: 0, 0.3s;}
+.fade_in.fade_three {-webkit-animation-delay: 0, 0.6s;}
+.fade_in.fade_four {-webkit-animation-delay: 0, 0.9s;}
+.fade_in.fade_five {-webkit-animation-delay: 0, 1.2s;}
+.fade_in.fade_six {-webkit-animation-delay: 0, 1.5s;}
+
+/*---------   Structure ------------*/
+
+body {
+   background: url(/assets/bg.png) repeat-x fixed;
+  color: #fff;
+
+  color: #fff;
+}
+a {
+  color: #ff3399;
+}
+a:hover {
+  color: #ccc;
+  color: rgba(255,255,255,0.7);
+  
+  	 -webkit-transition: .1s ease-in;
+     -moz-transition: .1s ease-in;
+     transition: .1s ease-in;
+}
+h1#page_title, h2 {
+  font-size: 19px;
+  line-height: 22px;
+  margin: 0 0 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+
+br.clear {
+	clear: both;
+  
+}
+ul.lst, ul.lst li {
+  list-style-type: none;
+  margin: 0;
+  float: left;
+}
+.padding {
+  padding: 10px;
+}
+#main {
+  position: relative;
+}
+
+#header {
+	height: 80px;
+	position: fixed;
+  
+}
+#logo {
+  float: left;
+  margin: 0;
+}
+#logo a {
+  display: block;
+  float: left;
+  background: url(/assets/logo.png) no-repeat 0 0;
+  text-indent: -9000em;
+  width: 180px;
+  height: 60px;
+  margin: 40px 0 0;
+}
+#left_nav {
+	position: absolute;
+	left: 0px;
+	top: 170px;
+	
+
+	font-size: 19px;
+	font-weight: 900;
+
+}
+#left_nav li {
+  clear: left;
+}
+#left_nav a {
+	padding: 5px 0;
+	float: left;
+	color: #fff;
+  
+}
+#left_nav a:hover {
+  background: none;
+}
+#left_nav li.active a {
+	color: #ff3399;
+  
+}
+.scroll_box {
+  height: 1200px;
+  padding-top: 165px;
+
+}
+
+div.left_text p {
+	font-size: 16px;
+	line-height: 23px;
+	font-weight: 200;
+}
+p.home_paragraph_two {
+  float: left;
+  width: 280px;
+}
+
+#home_box {
+	background: url(/assets/home_box.png) no-repeat  360px 100px;
+  
+}
+#get_started_box {
+	background: url(/assets/get_started.png) no-repeat right 90px;
+  
+}
+#relax_box {
+	background: url(/assets/relax_page.png) no-repeat right 90px;
+  
+}
+#top_nav  {
+  float: right;
+  width: 700px;
+  background: #000000;
+  padding: 0 10px 10px;
+  -webkit-box-shadow:4px 3px 10px #000;
+}
+#top_nav ul li, #top_nav ul {
+  float: right;
+}
+#top_nav a {
+  float: right;
+  margin: 20px 0 0 10px;
+  font-size: 18px;
+}
+/*---------   Footer ------------*/
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  background: url(/assets/footer2.png) repeat-x bottom;
+}
+#footer_inner {
+  position: relative;
+}
+.footer_box {
+	margin-top: 80px;
+  
+}
+.footer_box h2 {
+  margin: 0 0 5px;
+}
+.share_buttons {
+  background: url(/assets/share_buttons.png) no-repeat;
+  width: 240px;
+  height: 20px;
+  float: left;
+  margin: 7px 0 0;
+}
+.email_signup_box {
+  background: url(/assets/email_signup_box.png) no-repeat;
+  width: 270px;
+  height: 30px;
+  float: left;
+}
+#app_store_link {
+  background: url(/assets/app_store.png) no-repeat;
+  text-indent: -9000em;
+  width: 175px;
+  height: 60px;
+  float: left;
+  margin: 22px 0 0 0;
+  
+}
+#free_iphone_app {
+  background: url(/assets/free_iphone_app.png) no-repeat;
+  text-indent: -9000em;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 0px 0 0 0;
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  
+}
 
