@@ -8,4 +8,110 @@
     = stylesheet_link_tag "application"
     =yield :head
   %body{:"data-spy"=>"scroll"}
-    =yield
+    :javascript
+      $(document).ready(function() {
+        $.localScroll();
+      })
+    #main
+      .container
+        #header.row
+          .span10
+            %h1#logo.fade_in
+              =link_to "Chase the Unicorn", "/#intro"
+            #top_nav
+              %ul.lst.fade_in.fade_two              
+                %li=link_to "Twitter", "http://twitter.com/sxswunicorn", :target=>"_blank"
+                / %li=link_to "Facebook", "#"
+                %li=link_to "Contact", "/#contact_box"
+                %li=link_to "FAQ", "/#faq_box"
+          #left_nav.span2.fade_in.fade_two  
+            %ul.nav.lst
+              %li=link_to "Home", "#intro"
+              %li=link_to "Get started", "#second"
+              %li=link_to "Relax", "#third"
+      #intro.scroll_box.fade_in.fade_four
+        .unicorn_image.bg
+        .container
+          .row          
+            .left_text.span4.offset2
+              %p
+                Ever been at SXSW and taunted by the elusive unicorn, sowing its seed of doubt as to whether you are at the best party or venue? Have you tried to chase the unicorn, foolishly dashing all night from one place to the next?
+              %p.home_paragraph_two
+                Well, here’s the answer to your woes. Now you can track the unicorn, letting it magically lead you to where the best party is currently happening.
+      #second.scroll_box.fade_in.fade_four
+        .container
+          .row
+            .left_text.span4.offset2
+              %h1 Get started          
+              %p
+                Simply open up the app and head and watch the magic unfold.
+              %p  
+                Using mysterious algorithms powered by evil trolls, the app will tell you where the Unicorn currently is located, and where it’s been previously sighted
+              %p  
+                Touch the refresh button to get live updates!         
+      #third.scroll_box.fade_in.fade_four
+        .container
+          .row
+            .left_text.span4.offset2
+              %h1 Relax          
+              %p
+                Touch the location to reveal the map and head for where the unicorn’s at. Let the waterfall of tranquility wash over you as you enjoy your evening knowing you’re having a cooler time than everybody else.
+              %p  
+                Don’t forget to check-in on Foursquare otherwise it didn’t happen.
+      #faq_box.scroll_box.fade_in.fade_four
+        .container
+          .row
+            .left_text.span4.offset2
+              %h1 FAQ
+              %p
+                Q: Why did you make this app?
+                %br
+                A: Why not?
+              %p  
+                Q: Can I ask you another question?
+                %br
+                A: You just did.            
+              %p  
+                Q: I have a great idea! How do I contact you.
+                %br
+                A: Click on the contact link above
+      #contact_box.scroll_box.fade_in.fade_four
+        .container
+          .row
+            .left_text.span4.offset2
+              %h1 Contact
+              %p
+                Yoomee
+                %br
+                Electric Works
+                %br
+                Sheffield Digital Campus
+                %br
+                Sheffield S1 2BJ
+                %br
+                Tel: +44 (0) 114 286 6228
+                %br
+                twitter.com/yoomeehq
+                %br
+                facebook.com/yoomeehq
+                %br
+                email: unicorn@yoomee.com
+          
+          
+      
+    =#yield
+    #footer
+      #footer_inner.container
+        .row
+          .footer_box.span3
+            %h2 Share this
+            .share_buttons
+          .footer_box.span3
+            %h2 Keep posted
+            %p
+              Sign up for email updates.
+            .email_signup_box  
+          .footer_box.span3.offset1
+            %h2#free_iphone_app Free iPhone App!
+            =link_to "available on the App Store", "http://itunes.apple.com/us/app/chase-the-unicorn/id500708227", :id=>"app_store_link", :target=>"_blank"
+    #fb-root
