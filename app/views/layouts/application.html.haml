@@ -19,20 +19,23 @@
             %h1#logo.fade_in
               =link_to "Chase the Unicorn", "/#intro"
             #top_nav
-              %ul.lst.fade_in.fade_two              
-                %li=link_to "Twitter", "http://twitter.com/sxswunicorn", :target=>"_blank"
-                / %li=link_to "Facebook", "#"
-                %li=link_to "Contact", "/#contact_box"
-                %li=link_to "FAQ", "/#faq_box"
+              =link_to "Follow on Twitter", "http://twitter.com/sxswunicorn", :target=>"_blank"
+              -if false
+                %ul.lst.fade_in.fade_two              
+                  %li=link_to "Follow on Twitter", "http://twitter.com/sxswunicorn", :target=>"_blank"
+                  / %li=link_to "Facebook", "#"
+                  / %li=link_to "Contact", "/#contact_box"                
           #left_nav.span2.fade_in.fade_two  
             %ul.nav.lst
               %li=link_to "Home", "#intro"
               %li=link_to "Get started", "#second"
               %li=link_to "Relax", "#third"
+              %li#faq_link=link_to "FAQ & Contact", "#fourth"
       #intro.scroll_box.fade_in.fade_four
-        .unicorn_image.bg
-        .container
-          .row          
+        .bg
+        .container          
+          .row    
+            .unicorn_image    
             .left_text.span4.offset2
               %p
                 Ever been at SXSW and taunted by the elusive unicorn, sowing its seed of doubt as to whether you are at the best party or venue? Have you tried to chase the unicorn, foolishly dashing all night from one place to the next?
@@ -41,15 +44,21 @@
       #second.scroll_box.fade_in.fade_four
         .container
           .row
+            .iphone_image_1
             .left_text.span4.offset2
               %h1 Get started          
               %p
                 Simply open up the app and head and watch the magic unfold.
-              %p  
+              %p.current_location
+                %span.counter
+                  1 
                 Using mysterious algorithms powered by evil trolls, the app will tell you where the Unicorn currently is located, and where it’s been previously sighted
-              %p  
+              %p.refresh_link  
+                %span.counter
+                  2                 
                 Touch the refresh button to get live updates!         
       #third.scroll_box.fade_in.fade_four
+        .bg
         .container
           .row
             .left_text.span4.offset2
@@ -58,11 +67,12 @@
                 Touch the location to reveal the map and head for where the unicorn’s at. Let the waterfall of tranquility wash over you as you enjoy your evening knowing you’re having a cooler time than everybody else.
               %p  
                 Don’t forget to check-in on Foursquare otherwise it didn’t happen.
-      #faq_box.scroll_box.fade_in.fade_four
+      #fourth.scroll_box.fade_in.fade_four
+        .contact_swirls.bg
         .container
           .row
             .left_text.span4.offset2
-              %h1 FAQ
+              %h2 FAQ
               %p
                 Q: Why did you make this app?
                 %br
@@ -74,12 +84,9 @@
               %p  
                 Q: I have a great idea! How do I contact you.
                 %br
-                A: Click on the contact link above
-      #contact_box.scroll_box.fade_in.fade_four
-        .container
-          .row
-            .left_text.span4.offset2
-              %h1 Contact
+                A: Look right &rarr;
+            .left_text.span3
+              %h2 Contact us              
               %p
                 Yoomee
                 %br
@@ -96,6 +103,8 @@
                 facebook.com/yoomeehq
                 %br
                 email: unicorn@yoomee.com
+              =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"  
+                
           
           
       
@@ -120,6 +129,7 @@
                     po.src = 'https://apis.google.com/js/plusone.js';
                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
                   })();
+            =link_to "FAQ & Contact", "/#fourth", :id=>"faq_contact_link"      
           .footer_box.span3
             %h2 Keep posted
             %p
