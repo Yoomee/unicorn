@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_filter :redirect_to_twitter
+  #before_filter :redirect_to_twitter
   def index
   end
   

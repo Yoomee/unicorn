@@ -74,6 +74,7 @@ $(document).ready(function() { //when the document is ready...
 			//call the newPos function and change the background position
 			$secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1250, 0.3)});
 			//call the newPos function and change the secnond background position
+			inner_image.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
 			
 		}
 		
@@ -81,12 +82,13 @@ $(document).ready(function() { //when the document is ready...
 		if($thirdBG.hasClass("inview")){
 			//call the newPos function and change the background position
 			$thirdBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.3)});
+			inner_image.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
 		}
 		
 		//if the fourth section is in view...
 		if($fourthBG.hasClass("inview")){
-			//call the newPos function and change the background position for CSS3 multiple backgrounds
-			$fourthBG.css({'backgroundPosition': newPos(0, windowHeight, pos, 200, 0.9) + ", " + newPos(50, windowHeight, pos, 0, 0.7) + ", " + newPos(50, windowHeight, pos, 0, 0.5) + ", " + newPos(50, windowHeight, pos, 700, 0.3)});
+			$fourthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.3)});
+			inner_image.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
 		}
 		
 		$('#pixels').html(pos); //display the number of pixels scrolled at the bottom of the page
