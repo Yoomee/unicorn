@@ -2,8 +2,12 @@ class ApisController < ApplicationController
   #before_filter :get_venues
   before_filter :log_user
   def show
-    #render :json => {:venues => @venues, :message =>  {:text => "Welcome to the Unicorn tracker!", :button_text => "Let's go", :button_hidden => false, :id => 1}}
+    #sleep 30
     if params[:v] == "1.2"
+      venues = ActiveSupport::JSON.decode(File.read(File.join(Rails.root, "lib", "venues.json")))
+      message = {:text => "Welcome to the Unicorn tracker!\n\nThe unicorn has embarked on its mysterious journey to South by South West and is due to touch down in Austin on March 9.\n\nCheck back then to share in its magic.", :button_text => "Ok", :button_hidden => false}
+      message[:id] = params[:m].to_i < 5 ? params[:m].to_i + 1 : 5
+      render :json => {:message => message, :venues => venues}
     else
       venues = ActiveSupport::JSON.decode(File.read(File.join(Rails.root, "lib", "venues.json")))
       message = {:text => "Welcome to the Unicorn tracker!\n\nThe unicorn has embarked on its mysterious journey to South by South West and is due to touch down in Austin on March 9.\n\nCheck back then to share in its magic.", :button_text => "Ok", :button_hidden => false}
