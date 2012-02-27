@@ -47,7 +47,7 @@
 /*---------   Structure ------------*/
 
 body {
-   background: url(/assets/bg.png) repeat-x fixed;
+   background: #390663;
   color: #fff;
 
   color: #fff;
@@ -101,6 +101,10 @@ ul.lst, ul.lst li {
 #logo {
   float: left;
   margin: 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 20;
 }
 #logo a {
   display: block;
@@ -115,6 +119,7 @@ ul.lst, ul.lst li {
 	position: absolute;
 	left: 0px;
 	top: 170px;
+	z-index: 8;
 	
 
 	font-size: 19px;
@@ -138,8 +143,8 @@ ul.lst, ul.lst li {
   
 }
 .scroll_box {
-  height: 1200px;
-  padding-top: 165px;
+  height: 900px;
+  padding-top: 0px;
 
 }
 
@@ -153,32 +158,61 @@ p.home_paragraph_two {
   width: 280px;
 }
 
-#home_box {
-	background: url(/assets/home_box.png) no-repeat  360px 100px;
+.left_text {
+	margin-top: 170px;
+  	position: relative;
+  	z-index: 6;
+}
+
+#intro {
+	background: url(/assets/home_box.jpg) 50% 0 no-repeat fixed;	
+
   
 }
-#get_started_box {
+.scroll_bg .bg {
+  z-index: 1;
+}
+
+.unicorn_image {
+
+	background: url(/assets/stars.png) 50% 0 no-repeat fixed;
+	width: 100%;
+	height: 1200px;  
+	position: absolute;
+	top: 0px;
+	right: 0;
+}
+
+#second {
 	background: url(/assets/get_started.png) no-repeat right 90px;
+	background: url(/assets/second.jpg) 50% 0 no-repeat fixed;	
   
 }
-#relax_box {
+#third {
 	background: url(/assets/relax_page.png) no-repeat right 90px;
   
 }
 #top_nav  {
   float: right;
-  width: 700px;
-  background: #000000;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 7;
+
   padding: 0 10px 10px;
-  -webkit-box-shadow:4px 3px 10px #000;
+
 }
 #top_nav ul li, #top_nav ul {
   float: right;
 }
 #top_nav a {
   float: right;
-  margin: 20px 0 0 10px;
+  margin: 20px 0 0 15px;
   font-size: 18px;
+}
+#top_nav a:hover {
+  text-decoration: none;
+  color: #fff;
 }
 /*---------   Footer ------------*/
 #footer {
