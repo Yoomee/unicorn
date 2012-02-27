@@ -200,14 +200,21 @@ p.home_paragraph_two {
   margin: 0 0 5px;
 }
 .share_buttons {
-  background: url(/assets/share_buttons.png) no-repeat;
-  width: 240px;
+/*  background: url(/assets/share_buttons.png) no-repeat;
+*/  width: 240px;
   height: 20px;
   float: left;
   margin: 7px 0 0;
 }
+
+.share_buttons li {
+  float:left;
+}
+#twitter_share { width:95px;}
+#facebook_share { width:90px;}
+#google_share { width:55px;}
 .email_signup_box {
-  background: url(/assets/email_signup_box.png) no-repeat;
+/*  background: url(/assets/email_signup_box.png) no-repeat;*/
   width: 270px;
   height: 30px;
   float: left;
