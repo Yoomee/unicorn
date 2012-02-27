@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   USERS = { "yoomee" => "olive123" }
+  layout 'admin'
  
   before_filter :authenticate
   

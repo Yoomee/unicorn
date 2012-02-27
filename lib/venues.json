@@ -1,33 +1,23 @@
+[
 {
-  "message":{
-    "text":"Welcome to the Unicorn tracker!\n\nThe unicorn has embarked on its mysterious journey to South by South West and is due to touch down in Austin on March 9.\n\nCheck back then to share in its magic.",
-    "button_text":"Ok",
-    "id":2,
-    "button_hidden":false
-  },
-  "venues":[
-  {
-    "id":"4cbc44f4dd41a35d6193f2a0",
-    "name":"Magical Unicorn Forest",
-    "contact":{},
-    "location":{"address":"פנחס רוזן 69","lat":32.11464015077166,"lng":34.82516850766829,"country":"Israel"}
-  },
-  {
-    "id":"4e51414aa80997aa8a524281",
-    "name":"Riding Unicorns Through The Forest Of Invisibility",
-    "contact":{},
-    "location":{"address":"","lat":27.929900530997372,"lng":-82.00154307942596,"country":"United States"}
-  },
-  {
-    "id":"4efdc56f7ee5f14f38b8ecee","name":"Forest Of The Unicorn","contact":{},"location":{"address":"","lat":29.701719556577732,"lng":-82.36146315887473,"city":"Gainesville","country":"United States"}
-  },
-  {
-    "id":"4c080decb235ef3ba05b8937","name":"Area 51","contact":{},"location":{"address":"37°14'36.52\"N, 115°48'41.16\"W","lat":37.234992396001644,"lng":-115.81113338470459,"country":"United States","city": "Groom Lake"}
-  },
-  {
-    "id":"4ba011f3f964a5205a5737e3","name":"International Space Station","contact":{},"location":{"address":"","lat":47.612419,"lng":-122.25516200065613,"country":"United States"}
-  }
-  ]
+  "id":"4cbc44f4dd41a35d6193f2a0",
+  "name":"Magical Unicorn Forest",
+  "contact":{},
+  "location":{"address":"פנחס רוזן 69","lat":32.11464015077166,"lng":34.82516850766829,"country":"Israel"}
+},
+{
+  "id":"4e51414aa80997aa8a524281",
+  "name":"Riding Unicorns Through The Forest Of Invisibility",
+  "contact":{},
+  "location":{"address":"","lat":27.929900530997372,"lng":-82.00154307942596,"country":"United States"}
+},
+{
+  "id":"4efdc56f7ee5f14f38b8ecee","name":"Forest Of The Unicorn","contact":{},"location":{"address":"","lat":29.701719556577732,"lng":-82.36146315887473,"city":"Gainesville","country":"United States"}
+},
+{
+  "id":"4c080decb235ef3ba05b8937","name":"Area 51","contact":{},"location":{"address":"37°14'36.52\"N, 115°48'41.16\"W","lat":37.234992396001644,"lng":-115.81113338470459,"country":"United States","city": "Groom Lake"}
+},
+{
+  "id":"4ba011f3f964a5205a5737e3","name":"International Space Station","contact":{},"location":{"address":"","lat":47.612419,"lng":-122.25516200065613,"country":"United States"}
 }
-
-
+]

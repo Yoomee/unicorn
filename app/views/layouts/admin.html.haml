@@ -1,0 +1,11 @@
+!!! Strict
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title Chase the Unicorn
+    = csrf_meta_tag
+    = favicon_link_tag
+    = javascript_include_tag "application"
+    = stylesheet_link_tag "/assets/bootstrap.css"
+    =yield :head
+  %body{:"data-spy"=>"scroll"}
+    =yield
