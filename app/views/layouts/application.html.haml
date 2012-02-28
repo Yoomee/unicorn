@@ -149,6 +149,7 @@
                 %button.btn{:type => "submit", :name => "subscribe"}
                   Go 
           .footer_box.span3.offset1
-            %h2#free_iphone_app Free iPhone App!
+            =link_to("http://itunes.apple.com/us/app/chase-the-unicorn/id500708227") do
+              %h2#free_iphone_app Free iPhone App!
             =link_to "available on the App Store", "http://itunes.apple.com/us/app/chase-the-unicorn/id500708227", :id=>"app_store_link", :target=>"_blank"
     #fb-root
