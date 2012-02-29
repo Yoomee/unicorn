@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
   
   def faq
+    redirect_to_twitter
   end
   
   private

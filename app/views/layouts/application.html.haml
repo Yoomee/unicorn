@@ -7,6 +7,15 @@
     = javascript_include_tag "application"
     = stylesheet_link_tag "application"
     =yield :head
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29556102-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
   %body{:"data-spy"=>"scroll"}
     :javascript
       $(document).ready(function() {
@@ -139,7 +148,7 @@
                   <a href="https://twitter.com/share" class="twitter-share-button" data-via="sxswunicorn" data-text="I'm chasing the unicorn">Tweet</a>
                   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
               %li#facebook_share
-                %iframe{:src => "//www.facebook.com/plugins/like.php?href&send=false&layout=button_count&width=100&show_faces=false&action=like&colorscheme=light&height=21", :scrolling => "no", :frameborder => "0", :style => "border:none; overflow:hidden; width:100px; height:21px;", :allowTransparency => "true"}
+                %iframe{:src => "//www.facebook.com/plugins/like.php?href&send=false&layout=button_count&width=100&show_faces=false&action=like&colorscheme=light&height=21&appId=198425800257241", :scrolling => "no", :frameborder => "0", :style => "border:none; overflow:hidden; width:100px; height:21px;", :allowTransparency => "true"}
               %li#google_share
                 %div{:class => "g-plusone", :"data-size" => "medium"}
                 :javascript
@@ -157,6 +166,7 @@
                 %button.btn{:type => "submit", :name => "subscribe"}
                   Go 
           .footer_box.span3.offset1
-            %h2#free_iphone_app Free iPhone App!
+            =link_to("http://itunes.apple.com/us/app/chase-the-unicorn/id500708227") do
+              %h2#free_iphone_app Free iPhone App!
             =link_to "available on the App Store", "http://itunes.apple.com/us/app/chase-the-unicorn/id500708227", :id=>"app_store_link", :target=>"_blank"
     #fb-root
