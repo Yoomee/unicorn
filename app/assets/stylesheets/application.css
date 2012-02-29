@@ -64,8 +64,6 @@ a:hover {
      transition: .1s ease-in;
 }
 h1#page_title, h2 {
-  font-size: 15px;
-  font-weight: normal;
   line-height: 22px;
   margin: 0 0 15px;
 }
@@ -99,6 +97,9 @@ ul.lst, ul.lst li {
 	position: fixed;
 	z-index: 40;
   
+}
+.container {
+  padding: 0 20px;
 }
 #logo {
 	display: none;
@@ -300,7 +301,10 @@ li#faq_link a {
   
 }
 .footer_box h2 {
-  margin: 0 0 5px;
+  margin: 0 0 7px;
+    font-size: 14px;
+
+  line-height: 18px;
 }
 
 .share_buttons {
@@ -308,7 +312,7 @@ li#faq_link a {
 */  width: 240px;
   height: 20px;
   float: left;
-  margin: 7px 0 0;
+  margin: 0px 0 0;
 }
 
 .share_buttons li {
@@ -322,6 +326,7 @@ li#faq_link a {
   width: 270px;
   height: 30px;
   float: left;
+  margin: 0px 0 0;
 }
 #app_store_link {
   background: url(/assets/app_store.png) no-repeat;
@@ -360,13 +365,24 @@ li#faq_link a {
 	float: left;
   
 }
+.contact_us {
+  margin-top: 170px;
+  
+}
 #yoomee_logo {
   margin: 10px 0 0 0;
 }
-#faq_contact_link {
+
+#footer_links {
+	float: left;
+	clear: left;
+	width: 100%;
+  
+}
+
+#footer_links a {
   float: left;
-  clear: both;
-  margin: 15px 0 0;
+  margin: 15px 10px 0 0px;
   color: #999;
   
 }

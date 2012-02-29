@@ -31,10 +31,11 @@
             #top_nav
               =link_to "http://twitter.com/sxswunicorn", :target=>"_blank", :id=>"twitter_link" do
                 Follow on 
-                %span twitter            
-              =link_to "#fifth", :id=>"sxsw_link", :target=>"_blank" do
-                Chase at 
-                %span sxsw
+                %span twitter
+              -if false              
+                =link_to "#fifth", :id=>"sxsw_link", :target=>"_blank" do
+                  Chase at 
+                  %span sxsw
 
                 
               =#link_to "Follow on Twitter", "http://twitter.com/sxswunicorn", :target=>"_blank"
@@ -56,9 +57,11 @@
             .unicorn_image    
             .left_text.span4.offset2
               %p
-                Ever been at SXSW and taunted by the elusive unicorn, sowing its seed of doubt as to whether you are at the best party or venue? Have you tried to chase the unicorn, foolishly dashing all night from one place to the next?
+                Ever been at SXSW, taunted by the elusive unicorn sowing its seed of doubt as to whether you’re at the very best party or venue? You may well have tried chasing the unicorn, foolishly dashing from
+                %br
+                one place to the next all night.
               %p.home_paragraph_two
-                Well, here’s the answer to your woes. Now you can track the unicorn, letting it magically lead you to where the best party is currently happening.
+                Well, here’s the answer to your woes. We’ve hunted the unicorn down, and you can now track it too. So relax and let it magically lead you to the best party in town.
       #second.scroll_box.fade_in.fade_four
         .container
           .row
@@ -67,15 +70,15 @@
             .left_text.span4.offset2
               %h1 Get started          
               %p
-                Simply open up the app and watch the magic unfold.
+                Simply open up the app and the magic will unfold before your very eyes.
               %p.current_location
                 %span.counter
                   1 
-                Using mysterious algorithms powered by evil trolls, the app will tell you where the Unicorn currently is located, and where it’s been previously sighted
+                Using mysterious algorithms powered by evil trolls, the app will tell you where the unicorn’s currently to be found, and where it’s been previously sighted.
               %p.refresh_link  
                 %span.counter
                   2                 
-                Touch the refresh button to get live updates!         
+                Simply touch the refresh button to get live updates!         
       #third.scroll_box.fade_in.fade_four
         .bg
         .container
@@ -84,9 +87,9 @@
             .left_text.span4.offset2
               %h1 Chase!         
               %p
-                Touch the location to reveal the map and head for where the unicorn’s at. Let the waterfall of tranquility wash over you as you enjoy your evening knowing you’re having a cooler time than everybody else.
+                Touch the location to reveal the map and head for where the unicorn’s at. Let the waterfall of tranquility wash over you as you enjoy your evening, safe knowing you’re having a cooler time than everybody else.
               %p  
-                Don’t forget to check-in on Foursquare otherwise it didn’t happen.
+                Don’t forget to check-in on Foursquare, otherwise it didn’t happen.
       #fourth.scroll_box.fade_in.fade_four
         .contact_swirls.bg
         .container
@@ -106,7 +109,16 @@
                 Q: I have a great idea! How do I contact you.
                 %br
                 A: Look right &rarr;
-            .left_text.span3
+      #fifth.scroll_box.fade_in.fade_four
+        .contact_swirls.bg
+        .container
+          .row
+            =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
+            .left_text.span5.offset2
+              %h2 About
+              %p This is not an official SXSW app and is not affiliated to SXSW inc.
+              %p More information coming soon.
+            .contact_us.span2
               %h2 Contact us              
               %p
                 Yoomee
@@ -124,23 +136,13 @@
                 facebook.com/yoomeehq
                 %br
                 email: unicorn@yoomee.com
-              =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"  
-      #fifth.scroll_box.fade_in.fade_four
-        .contact_swirls.bg
-        .container
-          .row
-            =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
-            .left_text.span4.offset2
-              %h2 About
-              %p
-                Coming soon.....
-              %p.not_affiliated The unicorn is not affiliated by SXSW, Inc       
+              =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"                
       
     =#yield
     #footer
       #footer_inner.container
         .row
-          .footer_box.span3
+          #share_this_box.footer_box.span3
             %h2 Share this
             %ul.share_buttons.unstyled
               %li#twitter_share
@@ -157,7 +159,10 @@
                     po.src = 'https://apis.google.com/js/plusone.js';
                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
                   })();
-            =link_to "FAQ & Contact", "/#fourth", :id=>"faq_contact_link"      
+            #footer_links      
+              =link_to "About", "/#fifth", :id=>"about_link"
+              =link_to "FAQ", "/#fourth", :id=>"faq_contact_link"
+            
           .footer_box.span3
             %h2 Tell me when the Unicorn is updated
             .email_signup_box  
