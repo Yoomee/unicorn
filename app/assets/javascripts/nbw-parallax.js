@@ -87,7 +87,7 @@ $(document).ready(function() { //when the document is ready...
 		
 		//if the fourth section is in view...
 		if($fourthBG.hasClass("inview")){
-			$fourthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 2850, 0.3)});
+			$fourthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 3750, 0.3)});
 			inner_image.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
 		}
 		

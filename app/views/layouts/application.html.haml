@@ -16,10 +16,19 @@
       .container
         #header.row
           .span10
-            %h1#logo.fade_in
-              =link_to "Chase the Unicorn", "/#intro"
+            %h1#logo
+              Chase the Unicorn
+              
             #top_nav
-              =link_to "Follow on Twitter", "http://twitter.com/sxswunicorn", :target=>"_blank"
+              =link_to "http://twitter.com/sxswunicorn", :target=>"_blank", :id=>"twitter_link" do
+                Follow on 
+                %span twitter            
+              =link_to "#fifth", :id=>"sxsw_link", :target=>"_blank" do
+                Chase at 
+                %span sxsw
+
+                
+              =#link_to "Follow on Twitter", "http://twitter.com/sxswunicorn", :target=>"_blank"
               -if false
                 %ul.lst.fade_in.fade_two              
                   %li=link_to "Follow on Twitter", "http://twitter.com/sxswunicorn", :target=>"_blank"
@@ -29,7 +38,7 @@
             %ul.nav.lst
               %li=link_to "Home", "#intro"
               %li=link_to "Get started", "#second"
-              %li=link_to "Relax", "#third"
+              %li=link_to "Chase!", "#third"
               %li#faq_link=link_to "FAQ & Contact", "#fourth"
       #intro.scroll_box.fade_in.fade_four
         .bg
@@ -45,10 +54,11 @@
         .container
           .row
             .iphone_image_1
+            =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
             .left_text.span4.offset2
               %h1 Get started          
               %p
-                Simply open up the app and head and watch the magic unfold.
+                Simply open up the app and watch the magic unfold.
               %p.current_location
                 %span.counter
                   1 
@@ -61,8 +71,9 @@
         .bg
         .container
           .row
+            =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
             .left_text.span4.offset2
-              %h1 Relax          
+              %h1 Chase!         
               %p
                 Touch the location to reveal the map and head for where the unicorn’s at. Let the waterfall of tranquility wash over you as you enjoy your evening knowing you’re having a cooler time than everybody else.
               %p  
@@ -71,6 +82,7 @@
         .contact_swirls.bg
         .container
           .row
+            =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
             .left_text.span4.offset2
               %h2 FAQ
               %p
@@ -104,9 +116,16 @@
                 %br
                 email: unicorn@yoomee.com
               =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"  
-                
-          
-          
+      #fifth.scroll_box.fade_in.fade_four
+        .contact_swirls.bg
+        .container
+          .row
+            =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
+            .left_text.span4.offset2
+              %h2 About
+              %p
+                Coming soon.....
+              %p.not_affiliated The unicorn is not affiliated by SXSW, Inc       
       
     =#yield
     #footer
@@ -131,12 +150,10 @@
                   })();
             =link_to "FAQ & Contact", "/#fourth", :id=>"faq_contact_link"      
           .footer_box.span3
-            %h2 Keep posted
-            %p
-              Sign up for email updates.
+            %h2 Tell me when the Unicorn is updated
             .email_signup_box  
               %form.inline-form{:action => "http://yoomee.us4.list-manage1.com/subscribe/post?u=dcc2fe4f7e39b75c1f46f5321&id=5ab708bff3", :method => "post", :target => "_blank"}
-                %input.input-medium{:type => "text", :name => "EMAIL"}
+                %input.input-medium{:type => "text", :name => "EMAIL", :value=>"your email"}
                 %button.btn{:type => "submit", :name => "subscribe"}
                   Go 
           .footer_box.span3.offset1
