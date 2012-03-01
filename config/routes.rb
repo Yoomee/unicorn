@@ -2,6 +2,13 @@ Unicorn::Application.routes.draw do
   root :to => 'home#index'
   
   resource :api
+  resources :venues do
+    collection do
+      get 'reload'
+    end
+  end
+  
+  resources :events
   
   match 'magic' => 'home#faq'
   

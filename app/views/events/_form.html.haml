@@ -1,0 +1,8 @@
+=semantic_form_for @event do |form|
+  =form.inputs do
+    =form.input :venue, :label => "Select a venue"
+    =form.input :venue_foursquare_id, :label => "Or enter a Foursquare venue ID"
+    =form.input :name
+    =form.input :starts_at, :as => :string
+    =form.input :ends_at, :as => :string
+  =form.buttons

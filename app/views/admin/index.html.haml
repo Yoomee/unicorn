@@ -1,35 +1,33 @@
-#main.container
-  .row
-    .span10
-      %br
-      %h2 Stats
-      %dl
-        %dt Total users
-        %dd=@app_users.count
-        %dt Total api calls
-        %dd=ApiCallLog.all.count
-      %h2 Users
-      %table.table.table-bordered.table-striped.table-condensed
-        %thead
-          %tr
-            %th UUID
-            %th Api calls
-            %th App version
-            %th IP location
-            %th Geolocation
-            %th Created
-        %tbody
-          -@app_users.each do |app_user|
-            %tr
-              %td=truncate(app_user.uuid,:length => 11)
-              %td=app_user.api_call_logs.count
-              %td=app_user.api_call_logs.collect(&:app_version).uniq.join(', ')
-              %td
-                -ip_lat_lng = [app_user.api_call_logs.last.ip_lat, app_user.api_call_logs.last.ip_lng]
-                -if !ip_lat_lng.all?{|l| l.to_i.zero?}
-                  =link_to(app_user.api_call_logs.last.ip_location, "http://maps.google.com/maps?q=loc:#{ip_lat_lng[0]},#{ip_lat_lng[1]}(#{u app_user.api_call_logs.last.ip_location})&z=7", :target => '_blank')
-              %td
-                -lat_lng = [app_user.api_call_logs.last.lat, app_user.api_call_logs.last.lng]
-                -if !lat_lng.all?{|l| l.to_i.zero?}
-                  =link_to("#{lat_lng.map{|l| "%.2f" % l.to_f}.join(', ')}", "http://maps.google.com/maps?q=loc:#{lat_lng[0]},#{lat_lng[1]}&z=7", :target => '_blank')
-              %td=app_user.created_at
+.span10
+  %br
+  %h2 Stats
+  %dl
+    %dt Total users
+    %dd=@app_users.count
+    %dt Total api calls
+    %dd=ApiCallLog.all.count
+  %h2 Users
+  %table.table.table-bordered.table-striped.table-condensed
+    %thead
+      %tr
+        %th UUID
+        %th Api calls
+        %th App version
+        %th IP location
+        %th Geolocation
+        %th Created
+    %tbody
+      -@app_users.each do |app_user|
+        %tr
+          %td=truncate(app_user.uuid,:length => 11)
+          %td=app_user.api_call_logs.count
+          %td=app_user.api_call_logs.collect(&:app_version).uniq.join(', ')
+          %td
+            -ip_lat_lng = [app_user.api_call_logs.last.ip_lat, app_user.api_call_logs.last.ip_lng]
+            -if !ip_lat_lng.all?{|l| l.to_i.zero?}
+              =link_to(app_user.api_call_logs.last.ip_location, "http://maps.google.com/maps?q=loc:#{ip_lat_lng[0]},#{ip_lat_lng[1]}(#{u app_user.api_call_logs.last.ip_location})&z=7", :target => '_blank')
+          %td
+            -lat_lng = [app_user.api_call_logs.last.lat, app_user.api_call_logs.last.lng]
+            -if !lat_lng.all?{|l| l.to_i.zero?}
+              =link_to("#{lat_lng.map{|l| "%.2f" % l.to_f}.join(', ')}", "http://maps.google.com/maps?q=loc:#{lat_lng[0]},#{lat_lng[1]}&z=7", :target => '_blank')
+          %td=app_user.created_at

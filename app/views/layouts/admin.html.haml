@@ -5,7 +5,9 @@
     = csrf_meta_tag
     = favicon_link_tag
     = javascript_include_tag "application"
-    = stylesheet_link_tag "/assets/bootstrap.css"
+    = stylesheet_link_tag "application"
     =yield :head
-  %body{:"data-spy"=>"scroll"}
-    =yield
+  %body
+    #main.container
+      .row
+        =yield
