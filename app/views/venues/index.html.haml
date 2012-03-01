@@ -1,31 +1,28 @@
-#main.container
-  .row
-    .span8
-      %h1 Venues
-    .span2
-      =link_to(reload_venues_path, :id => 'reload-data', :class => "btn btn-primary pull-right", :confirm => "Are you sure? It'll take a while!") do
-        %i.icon-repeat.icon-white
-        Reload data
-  .row
-    .span10
-      %table.table.table-bordered.table-striped
-        %thead
-          %tr
-            %th Name
-            %th Category
-            %th Address
-            %th Verified
-            %th Here
-        %tbody
-          -@venues.each do |venue|
-            %tr
-              %td=link_to(venue.name,venue.fs_url, :target => "_blank")
-              %td.categories
-                -if venue.primary_category
-                  =image_tag(venue.primary_category.icon_url)
-                  =venue.primary_category.name
-              %td=venue.address
-              %td
-                %i{:class => "icon-#{venue.verified ? 'ok' : 'remove'}"}
-              %td=venue.here_now
-      =will_paginate @venues
+.span8
+  %h1 Venues
+.span2
+  =link_to(reload_venues_path, :id => 'reload-data', :class => "btn btn-primary pull-right", :confirm => "Are you sure? It'll take a while!") do
+    %i.icon-repeat.icon-white
+    Reload data
+.span10
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Name
+        %th Category
+        %th Address
+        %th Verified
+        %th Here
+    %tbody
+      -@venues.each do |venue|
+        %tr
+          %td=link_to(venue.name,venue.fs_url, :target => "_blank")
+          %td.categories
+            -if venue.primary_category
+              =image_tag(venue.primary_category.icon_url)
+              =venue.primary_category.name
+          %td=venue.address
+          %td
+            %i{:class => "icon-#{venue.verified ? 'ok' : 'remove'}"}
+          %td=venue.here_now
+  =will_paginate @venues

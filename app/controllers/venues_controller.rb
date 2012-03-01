@@ -7,7 +7,7 @@ class VenuesController < ApplicationController
   end
   
   def reload
-    Venue.get_trending(AUSTIN, 4)
+    Venue.get_trending(AUSTIN, 2)
     redirect_to venues_path
   end
 end

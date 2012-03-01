@@ -1,0 +1,22 @@
+.span8
+  %h1 Events
+.span2
+  =link_to(new_event_path, :id => 'reload-data', :class => "btn btn-primary pull-right") do
+    %i.icon-white.icon-plus
+    New event
+.span10
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Venue
+        %th Name
+        %th Start
+        %th{:colspan => 2} End
+    %tbody
+      -@events.each do |event|
+        %tr
+          %td=link_to(event.venue.name,event.venue.fs_url, :target => "_blank")
+          %td=event.name
+          %td=event.starts_at
+          %td=event.ends_at
+          %td=link_to("Edit",'#')
