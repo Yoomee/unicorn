@@ -6,6 +6,7 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_tree . 
  *= require_self
+ *= require formtastic-bootstrap
 */
 
 /*CSS3 magic*/

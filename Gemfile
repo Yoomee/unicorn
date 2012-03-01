@@ -9,6 +9,10 @@ gem 'jquery-rails'
 gem 'will_paginate'
 gem 'httparty'
 gem 'geoip'
+gem 'geocoder'
+gem 'will_paginate'
+gem 'formtastic'
+gem 'formtastic-bootstrap', :git => "git://github.com/cgunther/formtastic-bootstrap.git", :branch => "bootstrap-2"
 
 group :production do
   gem 'pg'
