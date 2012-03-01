@@ -5,7 +5,7 @@
     %i.icon-white.icon-plus
     New event
 .span10
-  %table.table.table-bordered.table-striped
+  %table.table.table-striped
     %thead
       %tr
         %th Venue
@@ -19,4 +19,11 @@
           %td=event.name
           %td=event.starts_at
           %td=event.ends_at
-          %td=link_to("Edit",'#')
+          %td
+            .btn-group.pull-right
+              =link_to(edit_event_path(event), :class => "btn") do
+                %i.icon-pencil
+                Edit
+              =link_to(event_path(event), :method => :delete, :confirm => "Are you sure?", :class => "btn") do
+                %i.icon-trash
+                Delete
