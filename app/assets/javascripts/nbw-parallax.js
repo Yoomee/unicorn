@@ -22,7 +22,10 @@ $(document).ready(function() { //when the document is ready...
 	var $secondBG = $('#second');
 	var $thirdBG = $('#third');
 	var $fourthBG = $('#fourth');
+	var $fifthBG = $('#fifth');
 	var inner_image = $(".scroll_box .bg");
+	var inner_image2 = $(".scroll_box .bg2");
+	var inner_image3 = $(".scroll_box .bg3");	
 	
 	var windowHeight = $window.height(); //get the height of the window
 	
@@ -67,6 +70,7 @@ $(document).ready(function() { //when the document is ready...
 			//call the newPos function and change the background position
 			$firstBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 600, 0.3)}); 
 			inner_image.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
+			
 		}
 		
 		//if the second section is in view...
@@ -75,6 +79,8 @@ $(document).ready(function() { //when the document is ready...
 			$secondBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 1250, 0.3)});
 			//call the newPos function and change the secnond background position
 			inner_image.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
+			inner_image2.css({'backgroundPosition': newPos(50, windowHeight, pos, 2500, 0.3)});
+			inner_image3.css({'backgroundPosition': newPos(50, windowHeight, pos, 2000, 0.9)});
 			
 		}
 		
@@ -90,6 +96,11 @@ $(document).ready(function() { //when the document is ready...
 			$fourthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 3750, 0.3)});
 			inner_image.css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.2)});
 		}
+		//if the fifth section is in view...
+		if($fifthBG.hasClass("inview")){
+			$fifthBG.css({'backgroundPosition': newPos(50, windowHeight, pos, 4750, 0.3)});
+			
+		}		
 		
 		$('#pixels').html(pos); //display the number of pixels scrolled at the bottom of the page
 	}

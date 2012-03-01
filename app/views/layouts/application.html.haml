@@ -55,23 +55,27 @@
         .bg
         .container          
           .row    
-            .unicorn_image.bg
+            .unicorn_image
             =link_to("#fourth") do
               %h2.im_at_sxsw.bg.drop_from_top I'm at sxsw
             .left_text.span4.offset2
               %p
-                Ever been at SXSW, taunted by the elusive unicorn sowing its seed of doubt as to whether you’re at the very best party or venue? You may well have tried chasing the unicorn, foolishly dashing from
+                Ever been at SXSW, taunted by the elusive unicorn sowing its seed of doubt as to whether you’re at
                 %br
-                one place to the next all night.
+                the very best party or venue? Tried to chase 
+                %br
+                the unicorn, foolishly dashing from one
+                %br 
+                place to the next all night?
               %p.home_paragraph_two
-                Well, here’s the answer to your woes. We’ve hunted the unicorn down, and you can now track it too. So relax
-                %br
-                and let it magically lead you to the
-                %br
+                Well, now there's an app for that. We’ve hunted the unicorn down, and you can now track it too. So relax  and let it magically lead you to the 
                 best party in town.
+              
       #second.scroll_box.fade_in.fade_four
         .container
           .row
+            #moon_image.bg2
+            #rainbow.bg3    
             =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
             .left_text.span4.offset2
               %h1 Get started          
@@ -104,22 +108,22 @@
             .left_text.span5.offset2
               %h2 About
               %p
-                We were planning our visit to the mighty South By South (SXSW) conference in Austin, Texas this year, and musing on the dilemma faced by all SXSW newbies; there’s so much fun to be had, but how do you make sure you’re always at the best venue/party/bar/gig etc? This situation was described by a SXSW veteran as akin to chasing the elusive unicorn.
+                Made by
+                =link_to "Yoomee", "http://yoomee.com", :target=>"_blank" 
+                in England.              
+              %p
+                We were planning our visit to the mighty South By South (SXSW) conference in Austin, Texas this year, and musing on the dilemma faced by all SXSW newbies; there’s so much fun to be had, but how do you make sure you’re always at the best venue/party/bar/gig etc? This situation is described by SXSW veterans as akin to chasing the elusive unicorn.
               %p  
-                Being geeks with a sense of humour, we thought it would be fun to make an "app for that". In keeping with our Lean startup approach, we've come up with a very simple MVP (Minimum Viable Product) based on the basic concept. Our goal is to to explore the direction this could go in. We've already got some great ideas for making it into something useful.
+                Being geeks with a sense of humour, we thought it would be fun to make an "app for that". In keeping with our Lean Startup approach, we've come up with a very simple MVP (Minimum Viable Product) based on the basic concept. Our goal is to to explore the direction this could go in. We've already got some great ideas for making it into something useful.
               %p  
                 Please let us know what you think of the app.
               %p
                 Note: This app is not officially affiliated with SXSW and is officially ‘total unofficial’.
-              %p
-                Made by
-                =link_to "Yoomee", "http://yoomee.com" 
-                in England.
 
             .contact_us.span2
               %h2 Contact us              
               %p
-                Yoomee
+                =link_to "Yoomee", "http://yoomee.com", :target=>"_blank" 
                 %br
                 Electric Works
                 %br
@@ -129,12 +133,14 @@
                 %br
                 Tel: +44 (0) 114 286 6228
                 %br
-                twitter.com/yoomeehq
+                =link_to "twitter.com/yoomeehq", "http://twitter.com/yoomeehq", :target=>"_blank" 
                 %br
-                facebook.com/yoomeehq
-                %br
+                =link_to "facebook.com/yoomeehq", "http://facebook.com/yoomeehq", :target=>"_blank" 
+                %br                
                 email: unicorn@yoomee.com
-              =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"                                
+                =link_to "unicorn@yoomee.com", "mailto:unicorn@yoomee.com", :target=>"_blank" 
+              =link_to "http://yoomee.com", :target=>"_blank" do   
+                =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"                                
       #fifth.scroll_box.fade_in.fade_four
         .contact_swirls.bg
         .container

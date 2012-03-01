@@ -164,7 +164,7 @@ div.left_text p {
 }
 p.home_paragraph_two {
   float: left;
-  width: 280px;
+  width: 230px;
 }
 
 .left_text {
@@ -206,7 +206,29 @@ p.home_paragraph_two {
 	background: url(/assets/second.jpg) no-repeat right 0px;	
   
 }
-
+#moon_image {
+  display: block;
+  width: 222px;
+  height: 424px;
+  background: url(/assets/moon.png) no-repeat 0 0;
+  position: absolute;
+  top: 550px;
+  z-index: 5;
+  left: 100px;
+}
+#rainbow {
+  display: block;
+  width: 960px;
+  height: 524px;
+  background: url(/assets/rainbow.png) no-repeat;
+  position: absolute;
+  top: 420px;
+  z-index: 4;
+  left: 100px;
+}
+.row {
+  overflow: normal;
+}
 span.counter {
 	float: left;
 	display: block;
@@ -378,11 +400,24 @@ li#faq_link a, li#about_link a  {
 }
 .contact_us {
   margin-top: 180px;
+  position: relative;
+  z-index: 20;
   
 }
 #yoomee_logo {
   margin: 10px 0 0 0;
 }
+
+/*#fourth .left_text a, #fourth .contact_us a {
+  color: #f5f5f5;
+  border-bottom: 1px solid #555;
+}
+#fourth .left_text a:hover, #fourth .contact_us a:hover {
+  color: #ff359a;
+  border-color:#ff359a;
+  
+  text-decoration: none;
+}*/
 
 #footer_links {
 	float: left;
@@ -404,5 +439,6 @@ li#faq_link a, li#about_link a  {
 }
 
 #fifth {
-  background: #555;
+  background: #000 url(/assets/faq_bg.jpg);
+  height: 2000px;
 }
