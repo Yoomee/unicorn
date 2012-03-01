@@ -36,14 +36,16 @@
     -webkit-animation-duration: 1s;
     -webkit-animation-timing-function: ease-in;
     -webkit-animation-iteration-count: 1;
+    
 }
- 
+
 .fade_in.fade_one {-webkit-animation-delay: 0, 0;}
 .fade_in.fade_two {-webkit-animation-delay: 0, 0.3s;}
 .fade_in.fade_three {-webkit-animation-delay: 0, 0.6s;}
 .fade_in.fade_four {-webkit-animation-delay: 0, 0.9s;}
 .fade_in.fade_five {-webkit-animation-delay: 0, 1.2s;}
 .fade_in.fade_six {-webkit-animation-delay: 0, 1.5s;}
+
 
 /*---------   Structure ------------*/
 
@@ -135,7 +137,7 @@ a.site_logo {
   clear: left;
 }
 #left_nav a {
-	padding: 5px 0;
+	padding: 6px 0;
 	float: left;
 	color: #fff;
   
@@ -163,11 +165,11 @@ div.left_text p {
 }
 p.home_paragraph_two {
   float: left;
-  width: 280px;
+  width: 230px;
 }
 
 .left_text {
-	margin-top: 170px;
+	margin-top: 180px;
   	position: relative;
   	z-index: 6;
 }
@@ -192,7 +194,7 @@ p.home_paragraph_two {
 	right: 0;
 }
 .unicorn_image {
-	background: url(/assets/unicorn_image.jpg) no-repeat 0 0;
+	background: url(/assets/unicorn_image2.jpg) no-repeat 0 0;
 	width: 960px;
 	height: 500px;  
 	position: absolute;
@@ -205,7 +207,29 @@ p.home_paragraph_two {
 	background: url(/assets/second.jpg) no-repeat right 0px;	
   
 }
-
+#moon_image {
+  display: block;
+  width: 222px;
+  height: 424px;
+  background: url(/assets/moon.png) no-repeat 0 0;
+  position: absolute;
+  top: 550px;
+  z-index: 5;
+  left: 100px;
+}
+#rainbow {
+  display: block;
+  width: 960px;
+  height: 524px;
+  background: url(/assets/rainbow.png) no-repeat;
+  position: absolute;
+  top: 420px;
+  z-index: 4;
+  left: 100px;
+}
+.row {
+  overflow: normal;
+}
 span.counter {
 	float: left;
 	display: block;
@@ -232,12 +256,11 @@ span.counter {
   background: #333 url(/assets/fourth.jpg);
   height: 1000px;
 }
-li#faq_link a {
+li#faq_link a, li#about_link a  {
 	font-size: 15px;
 
   font-weight: normal;
-  visibility: hidden;
-}
+  display: none;}
 #top_nav  {
   float: right;
   width: 100%;
@@ -252,11 +275,9 @@ li#faq_link a {
   margin-bottom: 20px;
 }
 #second .left_text {
-  margin-top: 260px;
+  margin-top: 170px;
 }
-#third .left_text {
-  margin-top: 260px;
-}
+
 
 
 #top_nav ul li, #top_nav ul {
@@ -284,6 +305,10 @@ li#faq_link a {
   text-decoration: none;
   background-color: #ff359a;
 }
+
+#faq_2 {
+  margin-top: 215px;
+}
 /*---------   Footer ------------*/
 #footer {
   position: fixed;
@@ -291,14 +316,14 @@ li#faq_link a {
   left: 0;
   width: 100%;
   z-index: 100;
-  height: 190px;
-  background: url(/assets/footer2.png) repeat-x bottom;
+  height: 170px;
+  background: url(/assets/footer2.png) repeat-x center -40px;
 }
 #footer_inner {
   position: relative;
 }
 .footer_box {
-	margin-top: 80px;
+	margin-top: 90px;
   
 }
 .footer_box h2 {
@@ -329,25 +354,33 @@ li#faq_link a {
   float: left;
   margin: 0px 0 0;
 }
+
+#email_signup_box {
+	float: left;
+	margin: 0 0 0 60px;
+  
+}
+
 #app_store_link {
   background: url(/assets/app_store.png) no-repeat;
   text-indent: -9000em;
   width: 175px;
   height: 60px;
   float: left;
-  margin: 22px 0 0 0;
+  margin:2px 0 0 0px;
   
 }
-#free_iphone_app {
-  background: url(/assets/free_iphone_app.png) no-repeat;
+.im_at_sxsw {
+  background: url(/assets/im_at_sxsw.png) no-repeat 0px;
   text-indent: -9000em;
   width: 100px;
-  height: 100px;
+  height: 200px;
   float: left;
   margin: 0px 0 0 0;
   position: absolute;
-  top: 25px;
-  right: 0px;
+	top: 175px;
+  right: 40px;
+  z-index: 100;
   
 }
 .footer_box input {
@@ -367,24 +400,38 @@ li#faq_link a {
   
 }
 .contact_us {
-  margin-top: 170px;
+  margin-top: 180px;
+  position: relative;
+  z-index: 20;
   
 }
 #yoomee_logo {
   margin: 10px 0 0 0;
 }
 
+/*#fourth .left_text a, #fourth .contact_us a {
+  color: #f5f5f5;
+  border-bottom: 1px solid #555;
+}
+#fourth .left_text a:hover, #fourth .contact_us a:hover {
+  color: #ff359a;
+  border-color:#ff359a;
+  
+  text-decoration: none;
+}*/
+
 #footer_links {
 	float: left;
-	clear: left;
-	width: 100%;
+	width: 30px;
+	margin: 10px 0 0 30px;
   
 }
 
 #footer_links a {
   float: left;
-  margin: 15px 10px 0 0px;
+  margin: 0px 10px 0 0px;
   color: #999;
+
   
 }
 .left_text p.not_affiliated {
@@ -393,5 +440,6 @@ li#faq_link a {
 }
 
 #fifth {
-  background: #555;
+  background: #000 url(/assets/faq_bg.jpg);
+  height: 2000px;
 }

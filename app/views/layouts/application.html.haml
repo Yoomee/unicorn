@@ -1,7 +1,7 @@
 !!! Strict
 %html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %title Chase the Unicorn
+    %title Chase the unicorn
     = csrf_meta_tag
     = favicon_link_tag
     = javascript_include_tag "application"
@@ -42,7 +42,7 @@
                 Follow on 
                 %span twitter
               -if false              
-                =link_to "#fifth", :id=>"sxsw_link", :target=>"_blank" do
+                =link_to "#fifth", :id=>"sxsw_link", :class=>"bg" do
                   Chase at 
                   %span sxsw
 
@@ -58,23 +58,33 @@
               %li=link_to "Home", "#intro"
               %li=link_to "Get started", "#second"
               %li=link_to "Chase!", "#third"
-              %li#faq_link=link_to "FAQ & Contact", "#fourth"
-      #intro.scroll_box.fade_in.fade_four
+              %li#faq_link=link_to "About", "#fourth"
+              %li#about_link=link_to "FAQ", "#fifth"
+      #intro.scroll_box.fade_in.fade_three
         .bg
         .container          
           .row    
-            .unicorn_image    
+            .unicorn_image
+            =link_to("#fourth") do
+              %h2.im_at_sxsw.bg.drop_from_top I'm at sxsw
             .left_text.span4.offset2
               %p
-                Ever been at SXSW, taunted by the elusive unicorn sowing its seed of doubt as to whether you’re at the very best party or venue? You may well have tried chasing the unicorn, foolishly dashing from
+                Ever been at SXSW, taunted by the elusive unicorn sowing its seed of doubt as to whether you’re at
                 %br
-                one place to the next all night.
+                the very best party or venue? Tried to chase 
+                %br
+                the unicorn, foolishly dashing from one
+                %br 
+                place to the next all night?
               %p.home_paragraph_two
-                Well, here’s the answer to your woes. We’ve hunted the unicorn down, and you can now track it too. So relax and let it magically lead you to the best party in town.
+                Well, now there's an app for that. We’ve hunted the unicorn down, and you can now track it too. So relax  and let it magically lead you to the 
+                best party in town.
+              
       #second.scroll_box.fade_in.fade_four
         .container
           .row
-            .iphone_image_1
+            #moon_image.bg2
+            #rainbow.bg3    
             =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
             .left_text.span4.offset2
               %h1 Get started          
@@ -104,33 +114,25 @@
         .container
           .row
             =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
-            .left_text.span4.offset2
-              %h2 FAQ
-              %p
-                Q: Why did you make this app?
-                %br
-                A: Why not?
-              %p  
-                Q: Can I ask you another question?
-                %br
-                A: You just did.            
-              %p  
-                Q: I have a great idea! How do I contact you.
-                %br
-                A: Look right &rarr;
-      #fifth.scroll_box.fade_in.fade_four
-        .contact_swirls.bg
-        .container
-          .row
-            =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
             .left_text.span5.offset2
               %h2 About
-              %p This is not an official SXSW app and is not affiliated to SXSW inc.
-              %p More information coming soon.
+              %p
+                Made by
+                =link_to "Yoomee", "http://yoomee.com", :target=>"_blank" 
+                in England.              
+              %p
+                We were planning our visit to the mighty South By South (SXSW) conference in Austin, Texas this year, and musing on the dilemma faced by all SXSW newbies; there’s so much fun to be had, but how do you make sure you’re always at the best venue/party/bar/gig etc? This situation is described by SXSW veterans as akin to chasing the elusive unicorn.
+              %p  
+                Being geeks with a sense of humour, we thought it would be fun to make an "app for that". In keeping with our Lean Startup approach, we've come up with a very simple MVP (Minimum Viable Product) based on the basic concept. Our goal is to to explore the direction this could go in. We've already got some great ideas for making it into something useful.
+              %p  
+                Please let us know what you think of the app.
+              %p
+                Note: This app is not officially affiliated with SXSW and is officially ‘total unofficial’.
+
             .contact_us.span2
               %h2 Contact us              
               %p
-                Yoomee
+                =link_to "Yoomee", "http://yoomee.com", :target=>"_blank" 
                 %br
                 Electric Works
                 %br
@@ -140,12 +142,56 @@
                 %br
                 Tel: +44 (0) 114 286 6228
                 %br
-                twitter.com/yoomeehq
+                =link_to "twitter.com/yoomeehq", "http://twitter.com/yoomeehq", :target=>"_blank" 
                 %br
-                facebook.com/yoomeehq
-                %br
+                =link_to "facebook.com/yoomeehq", "http://facebook.com/yoomeehq", :target=>"_blank" 
+                %br                
                 email: unicorn@yoomee.com
-              =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"                
+                =link_to "unicorn@yoomee.com", "mailto:unicorn@yoomee.com", :target=>"_blank" 
+              =link_to "http://yoomee.com", :target=>"_blank" do   
+                =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"                                
+      #fifth.scroll_box.fade_in.fade_four
+        .contact_swirls.bg
+        .container
+          .row
+            =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
+            .left_text.span4.offset2
+              %h2 FAQ
+              %p
+                Q: Why did you make the app?
+                %br
+                A: Just for fun. It's an experiment really.
+              %p  
+                Q: How are you making money from this app?
+                %br
+                A: We're not. See previous question.
+              %p  
+                Q: Is this app just for SXSW in Austin, Texas?
+                %br
+                A: At the moment yes.
+              %p  
+                Q: Is this app an official SXSW app?
+                %br
+                A: No. We’re not affiliated with SXSW in any way whatsoever and are officially ‘totally unofficial’.
+            #faq_2.left_text.span4    
+              %p
+                Q: When will the unicorn be live?
+                %br
+                A: We'll start tracking it from 8 March, when SXSW begins. 
+              %p
+                Q: How do you know where the unicorn is?
+                %br
+                A: Using mysterious algorithms powered by evil trolls.
+                %br
+                (Real answer: Foursquare magic)
+              %p  
+                Q: I have a great idea! How do I contact you?
+                %br
+                A: Please email unicorn@yoomee.com
+              %p  
+                Q: Will you roll this out in my area?
+                %br
+                A: Yes, if you tell us where you’d like it.
       
     =#yield
     #footer
@@ -168,19 +214,18 @@
                     po.src = 'https://apis.google.com/js/plusone.js';
                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
                   })();
-            #footer_links      
-              =link_to "About", "/#fifth", :id=>"about_link"
-              =link_to "FAQ", "/#fourth", :id=>"faq_contact_link"
             
           .footer_box.span3
-            %h2 Tell me when the Unicorn is updated
-            .email_signup_box  
-              %form.inline-form{:action => "http://yoomee.us4.list-manage1.com/subscribe/post?u=dcc2fe4f7e39b75c1f46f5321&id=5ab708bff3", :method => "post", :target => "_blank"}
-                %input.input-medium{:type => "text", :name => "EMAIL", :value=>"your email"}
-                %button.btn{:type => "submit", :name => "subscribe"}
-                  Go 
+            #email_signup_box
+              %h2 Tell me when the Unicorn is updated
+              .email_signup_box  
+                %form.inline-form{:action => "http://yoomee.us4.list-manage1.com/subscribe/post?u=dcc2fe4f7e39b75c1f46f5321&id=5ab708bff3", :method => "post", :target => "_blank"}
+                  %input.input-medium{:type => "text", :name => "EMAIL", :value=>"your email"}
+                  %button.btn{:type => "submit", :name => "subscribe"}
+                    Go 
           .footer_box.span3.offset1
-            =link_to("http://itunes.apple.com/us/app/chase-the-unicorn/id500708227") do
-              %h2#free_iphone_app Free iPhone App!
             =link_to "available on the App Store", "http://itunes.apple.com/us/app/chase-the-unicorn/id500708227", :id=>"app_store_link", :target=>"_blank"
+            #footer_links      
+              =link_to "About", "/#fourth", :id=>"about_link"
+              =link_to "FAQ", "/#fifth", :id=>"faq_contact_link"
     #fb-root
