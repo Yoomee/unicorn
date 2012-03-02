@@ -204,6 +204,16 @@ p.home_paragraph_two {
 	background: url(/assets/second.jpg) no-repeat right 0px;	
   
 }
+#stars2 {
+  display: block;
+  width: 502px;
+  height: 424px;
+  background:url(/assets/stars2.png) no-repeat;
+  position: absolute;
+  top: 300px;
+  z-index: 5;
+  left: 0px;
+}
 #moon_image {
   display: block;
   width: 222px;
@@ -216,13 +226,13 @@ p.home_paragraph_two {
 }
 #rainbow {
   display: block;
-  width: 960px;
+  width: 990px;
   height: 524px;
   background: url(/assets/rainbow.png) no-repeat;
   position: absolute;
   top: 420px;
   z-index: 4;
-  left: 100px;
+  left: 0px;
 }
 .row {
   overflow: normal;
@@ -426,8 +436,9 @@ li#faq_link a, li#about_link a  {
 
 #footer_links a {
   float: left;
-  margin: 0px 10px 0 0px;
-  color: #999;
+  margin: 0px 10px 5px 0px;
+  color: #ccc;
+  font-weight: bold;
 
   
 }

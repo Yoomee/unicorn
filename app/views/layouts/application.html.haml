@@ -83,6 +83,7 @@
       #second.scroll_box.fade_in.fade_four
         .container
           .row
+            #stars2
             #moon_image.bg2
             #rainbow.bg3    
             =link_to "Chase the Unicorn", "/#intro", :class=>"site_logo"
@@ -140,13 +141,12 @@
                 %br
                 Sheffield S1 2BJ
                 %br
-                Tel: +44 (0) 114 286 6228
+                +44 (0) 114 286 6228
                 %br
                 =link_to "twitter.com/yoomeehq", "http://twitter.com/yoomeehq", :target=>"_blank" 
                 %br
                 =link_to "facebook.com/yoomeehq", "http://facebook.com/yoomeehq", :target=>"_blank" 
                 %br                
-                email: unicorn@yoomee.com
                 =link_to "unicorn@yoomee.com", "mailto:unicorn@yoomee.com", :target=>"_blank" 
               =link_to "http://yoomee.com", :target=>"_blank" do   
                 =image_tag 'yoomee_logo.png', :id=>"yoomee_logo"                                
@@ -187,7 +187,8 @@
               %p  
                 Q: I have a great idea! How do I contact you?
                 %br
-                A: Please email unicorn@yoomee.com
+                A: Please email
+                =link_to "unicorn@yoomee.com", "mailto:unicorn@yoomee.com", :target=>"_blank"
               %p  
                 Q: Will you roll this out in my area?
                 %br
