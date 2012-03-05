@@ -15,6 +15,6 @@
           %div{:style => "width:234px"}=simple_format(@message.text)
         %td=@message.button_text
         %td=@message.button_hidden ? 'Yes' : 'No'
-        %td=@message.button_hidden ? 'Yes' : 'No'
+        %td=@message.repeat_count
         %td=link_to('Edit', edit_message_path)
   

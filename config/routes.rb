@@ -14,11 +14,15 @@ Unicorn::Application.routes.draw do
   
   resource :message
   resources :app_users, :only => [:index]  
-  resources :visits, :only => [:index]  
+  resources :visits, :only => [:index] do
+    collection do
+      get 'iphone', :as => 'iphone'
+    end
+  end
   resources :events
   
   match 'magic' => 'home#faq'
-  match 'admin' => 'visits#index'
+  match 'admin' => 'visits#iphone'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

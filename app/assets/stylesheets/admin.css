@@ -37,3 +37,28 @@ body#admin {
 h1 {
   margin-bottom:5px;
 }
+
+#iphone{
+  width:396px;
+  height:744px;
+  position:relative;
+  background: url(/assets/iphone.png) no-repeat 0 0;
+}
+
+#iphone #first-venue{
+  font-size:18px;
+  color: #ffffff;
+  position:absolute;
+  top:346px;
+  left:77px;
+}
+#iphone #other-venues {
+  font-size:17px;
+  color: #000000;  
+  position:absolute;
+  top:431px;
+  left:77px;
+}
+#iphone #other-venues li {
+  margin-bottom:17px;
+}

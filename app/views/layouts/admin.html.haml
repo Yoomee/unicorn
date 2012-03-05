@@ -13,10 +13,14 @@
         .navbar-inner
           .container
             %ul.nav
-              %li{:class => "#{'active' if controller_name == 'visits'}"}
-                =link_to(visits_path) do
+              %li{:class => "#{'active' if action_name == 'iphone'}"}
+                =link_to(admin_path) do
                   %i.icon-home.icon-white
-                  Unicorn
+                  Home
+              %li{:class => "#{'active' if controller_name == 'visits' && action_name == 'index'}"}
+                =link_to(visits_path) do
+                  %i.icon-screenshot.icon-white
+                  Sightings
               %li{:class => "#{'active' if controller_name == 'messages'}"}
                 =link_to(message_path) do
                   %i.icon-envelope.icon-white

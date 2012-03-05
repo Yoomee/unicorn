@@ -66,7 +66,7 @@ class Venue < ActiveRecord::Base
     end
 
     def primary_category
-      categories.where("venue_categories.primary = 1").first
+      categories.where("venue_categories.primary = true").first
     end
 
     def lat_lng

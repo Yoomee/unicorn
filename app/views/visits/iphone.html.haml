@@ -1,0 +1,10 @@
+.span8.hidden
+  %h1 iPhone
+.span10
+  #iphone
+    -if @visits.present?
+      #first-venue
+        =@visits.shift.venue.name
+      %ul.unstyled#other-venues
+        -@visits.each do |visit|
+          %li=visit.venue.name
