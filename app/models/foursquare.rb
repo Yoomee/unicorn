@@ -43,8 +43,10 @@ class Foursquare
     
     def get_trending_with_grid(lat,lng,grid_radius)
       venues = []
-      grid([lat,lng],grid_radius).each do |lat,lng|
-        venues += get_venues(lat,lng)["response"]["venues"] || []
+      points = grid([lat,lng],grid_radius)
+      points.each_with_index do |point,idx|
+        puts " > Point #{idx + 1}/#{points.size}"
+        venues += get_venues(point[0],point[1])["response"]["venues"] || []
       end
       venues.uniq!{|v| v["id"]}
     end

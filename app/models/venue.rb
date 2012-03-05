@@ -3,6 +3,7 @@ class Venue < ActiveRecord::Base
   has_many :categories, :through => :venue_categories
   has_many :events
   has_many :visits
+  Venue::AUSTIN = [30.2745, -97.7390]
   class << self
     def get_trending(center,radius)
       Foursquare.get_trending_with_grid(center[0], center[1],radius).each do |venue_data|
