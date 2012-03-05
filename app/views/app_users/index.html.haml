@@ -1,12 +1,13 @@
+.span4
+  %h1 App users
+.span6
+  #stats.pull-right
+    %b Stats
+    %i.icon-user
+    =@app_users.count
+    %i.icon-share-alt
+    =ApiCallLog.all.count
 .span10
-  %br
-  %h2 Stats
-  %dl
-    %dt Total users
-    %dd=@app_users.count
-    %dt Total api calls
-    %dd=ApiCallLog.all.count
-  %h2 Users
   %table.table.table-bordered.table-striped.table-condensed
     %thead
       %tr
