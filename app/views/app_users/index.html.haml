@@ -31,3 +31,5 @@
             -if !lat_lng.all?{|l| l.to_i.zero?}
               =link_to("#{lat_lng.map{|l| "%.2f" % l.to_f}.join(', ')}", "http://maps.google.com/maps?q=loc:#{lat_lng[0]},#{lat_lng[1]}&z=7", :target => '_blank')
           %td=app_user.created_at
+  =will_paginate @app_users
+    

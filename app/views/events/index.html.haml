@@ -5,25 +5,23 @@
     %i.icon-white.icon-plus
     New event
 .span10
-  %table.table.table-striped
+  %table.table.table-bordered.table-striped.table-condensed
     %thead
       %tr
+        %th Start
+        %th End
         %th Venue
         %th Name
-        %th Start
-        %th{:colspan => 2} End
+        %th Options
     %tbody
       -@events.each do |event|
         %tr
+          %td=event.starts_at.strftime('%H:%M on %a %e %B %G')
+          %td=event.ends_at.strftime('%H:%M on %a %e %B %G')
           %td=link_to(event.venue.name,event.venue.fs_url, :target => "_blank")
-          %td=event.name
-          %td=event.starts_at
-          %td=event.ends_at
           %td
-            .btn-group.pull-right
-              =link_to(edit_event_path(event), :class => "btn") do
-                %i.icon-pencil
-                Edit
-              =link_to(event_path(event), :method => :delete, :confirm => "Are you sure?", :class => "btn") do
-                %i.icon-trash
-                Delete
+            =event.name
+          %td
+            =link_to('Edit', edit_event_path(event))
+            &nbsp;
+            =link_to('Delete',event_path(event), :method => :delete, :confirm => "Are you sure?")

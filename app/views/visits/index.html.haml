@@ -1,0 +1,18 @@
+.span8
+  %h1 Where's the unicorn?
+.span10
+  %table.table.table-bordered.table-striped.table-condensed
+    %thead
+      %tr
+        %th Venue
+        %th Arrival time
+    %tbody
+      -@visits.each_with_index do |visit,idx|
+        %tr
+          %td
+            =link_to(visit.venue.name,visit.venue.fs_url, :target => "_blank")
+            -if idx.zero?
+              %span.label.label-warning Here now
+          %td=visit.arrived_at.strftime('%H:%M on %a %e %B %G')
+  =will_paginate @visits
+  

@@ -3,6 +3,6 @@
     =form.input :venue, :label => "Select a venue", :collection => Venue.order(:name)
     =form.input :venue_foursquare_id, :label => "Or enter a Foursquare venue ID"
     =form.input :name
-    =form.input :starts_at, :as => :string
-    =form.input :ends_at, :as => :string
+    =form.input :starts_at, :as => :string, :input_html => {:value => @event.formatted_starts_at}
+    =form.input :ends_at, :as => :string, :input_html => {:value => @event.formatted_ends_at}
   =form.buttons

@@ -2,6 +2,7 @@ class Venue < ActiveRecord::Base
   has_many :venue_categories, :dependent => :destroy
   has_many :categories, :through => :venue_categories
   has_many :events
+  has_many :visits
   class << self
     def get_trending(center,radius)
       Foursquare.get_trending_with_grid(center[0], center[1],radius).each do |venue_data|
@@ -44,6 +45,24 @@ class Venue < ActiveRecord::Base
         end
         venue
       end
+    end
+    
+    def as_json(options)
+      {
+        :id => fsid,
+        :name => name,
+        :location => {
+          :address => address,
+          :city => city,
+          :state => state,
+          :country => country,
+          :lat => lat,
+          :lng => lng
+        },
+        :hereNow => {
+          :count => here_now
+        }
+      }
     end
 
     def primary_category

@@ -7,10 +7,10 @@ gem 'xml-simple'
 gem 'json'
 gem 'jquery-rails'
 gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem 'httparty'
 gem 'geoip'
 gem 'geocoder'
-gem 'will_paginate'
 gem 'formtastic'
 gem 'formtastic-bootstrap', :git => "git://github.com/cgunther/formtastic-bootstrap.git", :branch => "bootstrap-2"
 

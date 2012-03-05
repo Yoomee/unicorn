@@ -1,0 +1,20 @@
+.span8
+  %h1 Message
+.span10
+  %table.table.table-bordered.table-striped.table-condensed
+    %thead
+      %tr
+        %th Text
+        %th Button text
+        %th Button hidden
+        %th Repeat count
+        %th Options
+    %tbody
+      %tr
+        %td
+          %div{:style => "width:234px"}=simple_format(@message.text)
+        %td=@message.button_text
+        %td=@message.button_hidden ? 'Yes' : 'No'
+        %td=@message.button_hidden ? 'Yes' : 'No'
+        %td=link_to('Edit', edit_message_path)
+  

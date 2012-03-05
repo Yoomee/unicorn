@@ -1,18 +1,24 @@
 Unicorn::Application.routes.draw do
   root :to => 'home#index'
   
-  resource :api
+  resource :api do
+    member do
+      get 'show2'
+    end
+  end
   resources :venues do
     collection do
       get 'reload'
     end
   end
   
+  resource :message
+  resources :app_users, :only => [:index]  
+  resources :visits, :only => [:index]  
   resources :events
   
   match 'magic' => 'home#faq'
-  
-  match 'admin' => 'admin#index'
+  match 'admin' => 'visits#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

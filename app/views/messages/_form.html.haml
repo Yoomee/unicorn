@@ -1,0 +1,6 @@
+=semantic_form_for @message do |form|
+  =form.inputs do
+    =form.input :text, :input_html => {:rows => 8, :style => "width:234px;overflow:hidden"}
+    =form.input :button_text
+    =form.input :button_hidden, :as => :boolean
+  =form.buttons

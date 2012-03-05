@@ -7,7 +7,33 @@
     = javascript_include_tag "application"
     = stylesheet_link_tag "application"
     =yield :head
-  %body
+  %body#admin
+    #main.container  
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            %ul.nav
+              %li{:class => "#{'active' if controller_name == 'visits'}"}
+                =link_to(visits_path) do
+                  %i.icon-home.icon-white
+                  Unicorn
+              %li{:class => "#{'active' if controller_name == 'messages'}"}
+                =link_to(message_path) do
+                  %i.icon-envelope.icon-white
+                  Message
+              %li{:class => "#{'active' if controller_name == 'events'}"}
+                =link_to(events_path) do
+                  %i.icon-calendar.icon-white
+                  Events
+              %li{:class => "#{'active' if controller_name == 'venues'}"}
+                =link_to(venues_path) do
+                  %i.icon-map-marker.icon-white
+                  Venues
+              %li{:class => "#{'active' if controller_name == 'app_users'}"}
+                =link_to(app_users_path) do
+                  %i.icon-user.icon-white
+                  App users
+  
     #main.container
       .row
         =yield
