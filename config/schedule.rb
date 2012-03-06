@@ -5,6 +5,6 @@ every 5.minutes do
   rake "venues:refresh"
 end
 
-every :minute do
+every 1.minute do
   rake "unicorn:move"
 end
