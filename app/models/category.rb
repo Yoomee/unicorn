@@ -14,7 +14,7 @@ class Category < ActiveRecord::Base
         :short_name => cat_data["shortName"],
         :icon_prefix => cat_data["icon"]["prefix"],
         :icon_extension => cat_data["icon"]["name"],
-        :super_category => super_category
+        :super_category => super_category || category.super_category
       })
       if cat_data["categories"].present?
         cat_data["categories"].each do |sub_cat_data|

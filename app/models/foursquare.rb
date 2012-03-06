@@ -52,7 +52,7 @@ CHECKIN_SHOUTS = [
   "Bump me.",
   "Follow the crowd.",
   "Checking in.",
-  "Even unicorns check-in.                     "
+  "Even unicorns check-in."
 ]
 
 class Foursquare
