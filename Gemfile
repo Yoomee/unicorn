@@ -15,6 +15,9 @@ gem 'formtastic'
 gem 'formtastic-bootstrap', :git => "git://github.com/cgunther/formtastic-bootstrap.git", :branch => "bootstrap-2"
 gem 'mysql2'
 
+gem 'whenever', :require => false
+
+
 group :development do
   gem 'sqlite3-ruby'
 end

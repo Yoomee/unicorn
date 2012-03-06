@@ -1,25 +1,22 @@
 Unicorn::Application.routes.draw do
   root :to => 'home#index'
   
-  resource :api do
-    member do
-      get 'show2'
-    end
-  end
-  resources :venues do
-    collection do
-      get 'reload'
-    end
-  end
-  
-  resource :message
+  resource  :api
   resources :app_users, :only => [:index]  
+  resources :categories do
+    member do
+      put 'blacklist'
+      put 'unblacklist'
+    end
+  end
+  resources :events
+  resource  :message
+  resources :venues  
   resources :visits, :only => [:index] do
     collection do
       get 'iphone', :as => 'iphone'
     end
   end
-  resources :events
   
   match 'magic' => 'home#faq'
   match 'admin' => 'visits#iphone'

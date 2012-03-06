@@ -33,6 +33,10 @@
                 =link_to(venues_path) do
                   %i.icon-map-marker.icon-white
                   Venues
+              %li{:class => "#{'active' if controller_name == 'categories'}"}
+                =link_to(categories_path) do
+                  %i.icon-list-alt.icon-white
+                  Categories
               %li{:class => "#{'active' if controller_name == 'app_users'}"}
                 =link_to(app_users_path) do
                   %i.icon-user.icon-white

@@ -19,9 +19,18 @@ class Foursquare
     def get_trending(lat, lng)
       get("/v2/venues/trending", :query => {:ll => "#{lat},#{lng}", :radius => 1500, :limit => 50})
     end
+    
+    def get_categories
+      get("/v2/venues/categories")
+    end
 
     def venue(id)
       get("/v2/venues/#{id}")
+    end
+    
+    def fetch_categories
+      root_categories = get_categories["response"]["categories"]
+      root_categories.each {|cat_data| Category.from_api(cat_data)}
     end
 
     def grid(center = [30.2745, -97.7390], radius=3)

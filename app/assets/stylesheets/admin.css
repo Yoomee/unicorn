@@ -62,3 +62,19 @@ h1 {
 #iphone #other-venues li {
   margin-bottom:17px;
 }
+
+.categories .blacklisted td:first-child{
+  text-decoration: line-through;
+}
+
+.categories .category td:first-child{
+  font-weight:bold;
+}
+
+.categories .sub_category td:first-child{
+  padding-left:25px;
+}
+.categories .sub_sub_category td:first-child{
+  padding-left:50px;
+  font-style:italic;
+}

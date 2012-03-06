@@ -3,6 +3,7 @@ namespace :venues do
   task :refresh => :environment do
     puts "Refreshing venue data"
     Venue.get_trending(Venue::AUSTIN, 4)
+    puts "Complete"
   end
 end
 
