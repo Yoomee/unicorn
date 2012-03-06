@@ -1,5 +1,11 @@
-.span8
+.span4
   %h1 Venues
+.span6
+  #stats.pull-right
+    Updated
+    =time_ago_in_words(Venue.order('updated_at DESC').first.updated_at)
+    ago 
+  
 .span10
   %table.table.table-bordered.table-striped.table-condensed
     %thead

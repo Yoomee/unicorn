@@ -1,5 +1,6 @@
 CLIENT_ID = "RNUCMNSYCSB5Y5ILJV21RDOTZIGU1XQ14URQJYJU0GMGKIU5"
 CLIENT_SECRET = "ZDWN011RQN1U25LKZDV4Q00I1GVF3XN2DW4MKDQF4J0MYXH2"
+USER_TOKEN = Rails.env.production? ? "5XIURRFI2SBOWJYS15AIAJ3FJ0Q5VBTHA1HCT3GDDERMXQDA" : "GUCRW4TMZOXV0EFDUVXJO3ALZLUI1A1LERX4KZELHSWIQWOF"
 
 class Foursquare
   include HTTParty
@@ -22,6 +23,10 @@ class Foursquare
     
     def get_categories
       get("/v2/venues/categories")
+    end
+    
+    def checkin(venue)
+      post("/v2/checkins/add", :query => {"venueId" => venue.id, :oauth_token => USER_TOKEN, :shout => "I've moved! #SXSW", :broadcast => 'public,twitter'})
     end
 
     def venue(id)

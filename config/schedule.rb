@@ -7,7 +7,6 @@
 #
 set :output, File.expand_path(File.dirname(__FILE__) + "/../log/cron.log")
 
-
 every 5.minutes do
   rake "venues:refresh"
 end
@@ -15,7 +14,7 @@ end
 every 30.minutes do
   rake "unicorn:move"
 end
-#
+
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
 # end
