@@ -14,7 +14,7 @@ namespace :unicorn do
   task :move => :environment do
     print "Prodding the Unicorn: \n > "
 
-    minutes_since_move = 1000 #Visit.first.present? ? (Time.current - Visit.order(:arrived_at).last.arrived_at) / 60 : 10000
+    minutes_since_move = Visit.first.present? ? (Time.current - Visit.order(:arrived_at).last.arrived_at) / 60 : 10000
     if minutes_since_move < RandomGaussian.new(60, 15).rand #Moved too recently
       puts " > It's too soon to move"
     else
