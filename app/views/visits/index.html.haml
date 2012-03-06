@@ -5,6 +5,7 @@
     %thead
       %tr
         %th Venue
+        %th Category
         %th Arrival time
     %tbody
       -@visits.each_with_index do |visit,idx|
@@ -13,6 +14,10 @@
             =link_to(visit.venue.name,visit.venue.fs_url, :target => "_blank")
             -if idx.zero?
               %span.label.label-warning Here now
+          %td.categories
+            -if visit.venue.primary_category
+              =image_tag(visit.venue.primary_category.icon_url)
+              =visit.venue.primary_category.name
           %td=visit.arrived_at.strftime('%H:%M on %a %e %B %G')
   =will_paginate @visits
   

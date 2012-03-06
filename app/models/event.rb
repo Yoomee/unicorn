@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
   belongs_to :venue
+  has_many :visits
   validates :venue, :presence => true
   validates :starts_at, :presence => true
   validates :ends_at, :presence => true

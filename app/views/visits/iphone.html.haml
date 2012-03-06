@@ -4,7 +4,8 @@
   #iphone
     -if @visits.present?
       #first-venue
-        =@visits.shift.venue.name
+        -visit = @visits.shift
+        =truncate((visit.event && visit.event.name.present? ? visit.event.name : visit.venue.name), :length => 27)
       %ul.unstyled#other-venues
         -@visits.each do |visit|
-          %li=visit.venue.name
+          %li=truncate((visit.event && visit.event.name.present? ? visit.event.name : visit.venue.name), :length => 27)
