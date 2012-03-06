@@ -7,7 +7,7 @@
     ago 
   
 .span10
-  %table.table.table-bordered.table-striped.table-condensed
+  %table.table.table-bordered.table-condensed.table-striped
     %thead
       %tr
         %th Name
@@ -17,7 +17,7 @@
         %th Here
     %tbody
       -@venues.each do |venue|
-        %tr
+        %tr{:class => "#{'blacklisted' if venue.primary_category.try(:blacklisted)}"}
           %td=link_to(venue.name,venue.fs_url, :target => "_blank")
           %td.categories
             -if venue.primary_category

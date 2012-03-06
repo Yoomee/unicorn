@@ -13,8 +13,7 @@ class CategoriesController < ApplicationController
     render :action => 'blacklist'
   end
   
-  
   def index
-    @categories = Category.where(:super_category_id => nil)
+    @categories = Category.where(:super_category_id => nil).order(:name)
   end
 end

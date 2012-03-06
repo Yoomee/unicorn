@@ -9,7 +9,7 @@
     %tbody.categories
       -@categories.each do |category|
         =render('categories/category', :category => category)
-        -category.sub_categories.each do |sub_category|
+        -category.sub_categories.order(:name).each do |sub_category|
           =render('categories/category', :category => sub_category)
-          -sub_category.sub_categories.each do |sub_sub_category|
+          -sub_category.sub_categories.order(:name).each do |sub_sub_category|
             =render('categories/category', :category => sub_sub_category)

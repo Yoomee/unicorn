@@ -3,6 +3,9 @@ class Venue < ActiveRecord::Base
   has_many :categories, :through => :venue_categories
   has_many :events
   has_many :visits
+  
+  scope :not_blacklisted, joins(:categories).where("categories.blacklisted = false")
+  
   Venue::AUSTIN = [30.2745, -97.7390]
   class << self
     def get_trending(center,radius)

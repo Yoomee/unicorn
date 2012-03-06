@@ -17,7 +17,7 @@ namespace :unicorn do
     if minutes_since_move < RandomGaussian.new(60, 15).rand
       puts "Too soon!"
     else
-      popular_venues = Venue.order('here_now DESC').limit(6)
+      popular_venues = Venue.not_blacklisted.order('here_now DESC').limit(6)
       recent_venues = Visit.order('arrived_at DESC').limit(5).collect(&:venue)
       popular_venues.reject!{|v| recent_venues.include?(v)}
       venue = popular_venues.first
