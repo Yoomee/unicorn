@@ -5,7 +5,6 @@
  *= require bootstrap
  *= require formtastic-bootstrap
  *= require chosen
- *= require jquery-ui-1.7.2.custom
  *= require_self
 */
 
@@ -87,3 +86,5 @@ tr.blacklisted {
 tr.blacklisted a{
   color:#84ADC1;
 }
+
+.date_time_select select{width:70px;}

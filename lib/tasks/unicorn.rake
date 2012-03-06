@@ -32,10 +32,10 @@ namespace :unicorn do
         event = events.first
         event.venue.visits.create(:arrived_at => Time.current, :event => event)
         puts "He's moved to the event #{event.name}"
-        #Foursquare.checkin(venue)
+        Foursquare.checkin(venue)
       else
         popular_venue.visits.create(:arrived_at => Time.current)
-        #Foursquare.checkin(venue)
+        Foursquare.checkin(venue)
         puts "He's moved to #{popular_venue.name}"
       end
     end

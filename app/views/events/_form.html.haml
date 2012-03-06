@@ -3,6 +3,10 @@
     =form.input :venue, :label => "Select a venue", :collection => Venue.order(:name)
     =form.input :venue_foursquare_id, :label => "Or enter a Foursquare venue ID"
     =form.input :name
-    =form.input :starts_at, :as => :string, :input_html => {:value => @event.formatted_starts_at}
-    =form.input :ends_at, :as => :string, :input_html => {:value => @event.formatted_ends_at}
-  =form.buttons
+    .control-group.string
+      %label.control-label{:for => "event_starts_at"} Starts at
+      .controls.date_time_select=form.datetime_select(:starts_at, :order => [:day, :month, :year], :minute_step => 5, :html => {:class => 'span2'})
+    .control-group
+      %label.control-label{:for => "event_ends_at"} Ends at
+      .controls.date_time_select=form.datetime_select(:ends_at, :order => [:day, :month, :year], :minute_step => 5, :html => {:class => 'span2'})
+    =form.buttons
