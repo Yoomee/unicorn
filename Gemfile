@@ -13,13 +13,9 @@ gem 'geoip'
 gem 'geocoder'
 gem 'formtastic'
 gem 'formtastic-bootstrap', :git => "git://github.com/cgunther/formtastic-bootstrap.git", :branch => "bootstrap-2"
-
-group :production do
-  gem 'pg'
-end
+gem 'mysql2'
 
 group :development do
-  gem 'mysql2'
   gem 'sqlite3-ruby'
 end
 
