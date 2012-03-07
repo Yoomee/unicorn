@@ -16,12 +16,11 @@
         %th Here
     %tbody
       -@venues.each do |venue|
-        %tr{:class => "#{'blacklisted' if venue.primary_category.try(:blacklisted)}"}
+        %tr{:class => "#{'blacklisted' if venue.primary_category.nil? || venue.primary_category.blacklisted?}"}
           %td
             =link_to(venue.name,venue.fs_url, :target => "_blank")
-            -if venue.verified
-              %i.icon{:class => "icon-#{venue.verified ? 'ok' : 'remove'}"}
-          
+            -if venue == Visit.order('arrived_at DESC').first.venue
+              %span.label.label-warning Here now
           %td.categories
             -if venue.primary_category
               =image_tag(venue.primary_category.icon_url)
