@@ -40,7 +40,11 @@
               %li{:class => "#{'active' if controller_name == 'app_users'}"}
                 =link_to(app_users_path) do
                   %i.icon-user.icon-white
-                  App users
+                  Users
+              %li{:class => "#{'active' if controller_name == 'foursquare_users'}"}
+                =link_to(foursquare_users_path) do
+                  %i.icon-ok-sign.icon-white
+                  Foursquare
               %li{:class => "#{'active' if controller_name == 'site_settings'}"}
                 =link_to(site_settings_path) do
                   %i.icon-cog.icon-white
