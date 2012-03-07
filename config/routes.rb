@@ -3,6 +3,7 @@ Unicorn::Application.routes.draw do
   
   resource  :api
   resources :app_users, :only => [:index]  
+  resources :foursquare_users, :only => [:index]  
   resources :categories do
     member do
       put 'blacklist'

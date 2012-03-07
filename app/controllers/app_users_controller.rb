@@ -8,7 +8,7 @@ class AppUsersController < ApplicationController
     day = 2.days.ago.day
     hour = 2.day.ago.hour
     @data = []
-    24.times do |idx|
+    48.times do |idx|
       @data << [hour.to_s,api_call_counts["#{"%02d" % day} #{"%02d" % hour}"].try(:size).to_i]
       if hour == 23
         hour = 0

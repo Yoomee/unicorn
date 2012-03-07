@@ -1,0 +1,16 @@
+.span10
+  %h1 Foursquare users
+.span10
+  %table.table.table-bordered.table-striped.table-condensed
+    %thead
+      %tr
+        %th Name
+        %th Home city
+        %th Visits
+    %tbody
+      -@foursquare_users.each do |user|
+        %tr
+          %td=link_to(user.name,user.canonical_url, :target => "_blank")
+          %td=user.home_city
+          %td=user.visits.count
+  =will_paginate @foursquare_users
