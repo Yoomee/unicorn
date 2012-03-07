@@ -8,6 +8,7 @@
         %th Category
         %th Here now
         %th Arrival time
+        %th Event
     %tbody
       -@visits.each_with_index do |visit,idx|
         %tr
@@ -21,5 +22,6 @@
               =visit.venue.primary_category.name
           %td=visit.here_now
           %td=visit.arrived_at.strftime('%H:%M on %a %e %B %G')
+          %td=visit.event.try(:name)
   =will_paginate @visits
   
