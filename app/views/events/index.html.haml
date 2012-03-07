@@ -12,6 +12,7 @@
         %th End
         %th Venue
         %th Name
+        %th Checkin message
         %th Options
     %tbody
       -@events.each do |event|
@@ -19,8 +20,8 @@
           %td=event.starts_at.strftime('%H:%M on %a %e %B %G')
           %td=event.ends_at.strftime('%H:%M on %a %e %B %G')
           %td=link_to(event.venue.name,event.venue.fs_url, :target => "_blank")
-          %td
-            =event.name
+          %td=event.name
+          %td=event.checkin_message
           %td
             =link_to('Edit', edit_event_path(event))
             &nbsp;

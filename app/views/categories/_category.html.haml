@@ -4,6 +4,6 @@
     =category.name
   %td
     -if category.blacklisted
-      =link_to "Remove from blacklist", unblacklist_category_path(category), :remote => true, :method => :put
+      =link_to "Remove from boring list", unblacklist_category_path(category), :remote => true, :method => :put
     -else
-      =link_to "Add to blacklist", blacklist_category_path(category), :remote => true, :method => :put
+      =link_to "Add to boring list", blacklist_category_path(category), :remote => true, :method => :put

@@ -6,6 +6,7 @@
       %tr
         %th Venue
         %th Category
+        %th Here now
         %th Arrival time
     %tbody
       -@visits.each_with_index do |visit,idx|
@@ -18,6 +19,7 @@
             -if visit.venue.primary_category
               =image_tag(visit.venue.primary_category.icon_url)
               =visit.venue.primary_category.name
+          %td=visit.here_now
           %td=visit.arrived_at.strftime('%H:%M on %a %e %B %G')
   =will_paginate @visits
   

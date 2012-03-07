@@ -6,10 +6,10 @@ CHECKIN_SHOUTS = [
  "I've moved!!!",
  "I've moved on",
  "Even unicorns check-in",
- "Chase me if you can.",
- "Chase me here if you can.",
- "Moving onto here.",
- "Bored with the last place.",
+ "Chase me if you can",
+ "Chase me here if you can",
+ "Moving onto here",
+ "Bored with the last place",
  "Naaay!Brrrrr!!",
  "Cliperty clop!",
  "Naayyyy!!",
@@ -24,23 +24,23 @@ CHECKIN_SHOUTS = [
  "The magic is here ->",
  "Chasing dreams. Come join me!",
  "Tranquility to be found here ->",
- "Chasing me is futile.",
- "I am here now.",
- "At one with the world.",
- "Come ride with me.",
+ "Chasing me is futile",
+ "I am here now",
+ "At one with the world",
+ "Come ride with me",
  "Party with me!",
  "Do you believe?",
- "The magic is definitely here.",
+ "The magic is definitely here",
  "Let me guide you",
  "*chortle*",
  "You are so missing out",
  "This is so much better",
- "Gamboling about.",
+ "Gamboling about",
  "Frolicking",
- "Skipping joyfully.",
+ "Skipping joyfully",
  "Cavorting",
  "Prancing",
- "Horny.",
+ "Horny",
  "Prancing about",
  "Strutting here",
  "Fancy strutting with me?",
@@ -48,11 +48,11 @@ CHECKIN_SHOUTS = [
  "Leaping",
  "Leaping excitedly",
  "Wondering where next?",
- "Dancing.",
- "Bump me.",
- "Follow the crowd.",
- "Checking in.",
- "Even unicorns check-in.",
+ "Dancing",
+ "Bump me",
+ "Follow the crowd",
+ "Checking in",
+ "Even unicorns check-in",
  "Are you here too?",
  "Here too?",
  "Rocking the house",
@@ -90,8 +90,9 @@ class Foursquare
       get("/v2/venues/categories")
     end
     
-    def checkin(venue)
-      post("/v2/checkins/add", :query => {"venueId" => venue.fsid, :oauth_token => USER_TOKEN, :shout => "#{CHECKIN_SHOUTS.sort_by{rand}.first} #SXSW", :broadcast => 'public,twitter'})
+    def checkin(venue,message = nil)
+      message = CHECKIN_SHOUTS.sort_by{rand}.first if message.blank?
+      post("/v2/checkins/add", :query => {"venueId" => venue.fsid, :oauth_token => USER_TOKEN, :shout => "#{message} #SXSW", :broadcast => 'public,twitter'})
     end
 
     def venue(id)
@@ -103,7 +104,7 @@ class Foursquare
       root_categories.each {|cat_data| Category.from_api(cat_data)}
     end
 
-    def grid(center = [30.2745, -97.7390], radius=3)
+    def grid(center, radius)
       width = radius * 2
       lat_min, lng_min, lat_max, lng_max = Geocoder::Calculations::bounding_box(center,radius)
       lats,lngs = [], []
@@ -124,7 +125,6 @@ class Foursquare
       venues = []
       points = grid([lat,lng],grid_radius)
       points.each_with_index do |point,idx|
-        puts " > Point #{idx + 1}/#{points.size}"
         venues += get_venues(point[0],point[1])["response"]["venues"] || []
       end
       venues.uniq!{|v| v["id"]}
