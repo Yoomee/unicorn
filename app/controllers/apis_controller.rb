@@ -1,21 +1,15 @@
 class ApisController < ApplicationController
-  #before_filter :get_venues
   before_filter :log_user
   def show
-    #venues = Visit.order('arrived_at DESC').limit(5)
-    venues = ActiveSupport::JSON.decode(File.read(File.join(Rails.root, "lib", "venues.json")))
-    if params[:v] == "1.2"
-      if Message.message.button_hidden || (@app_user.api_call_logs.where("created_at > ?",Message.message.updated_at).count < Message.message.repeat_count)
-        message = Message.message
-      else
-        message = nil
-      end
-      render :json => {:message => message, :venues => venues}
-    else
+    venues = Visit.order('arrived_at DESC').limit(5)
+    #venues = ActiveSupport::JSON.decode(File.read(File.join(Rails.root, "lib", "venues.json")))
+    if Message.message.button_hidden || (@app_user.api_call_logs.where("created_at > ?",Message.message.updated_at).count < Message.message.repeat_count)
       message = Message.message
-      message[:id] = params[:m].to_i < 10 ? params[:m].to_i + 1 : 10
-      render :json => {:message => message, :venues => venues}
+      message[:id] = params[:m].to_i + 1 if params[:v].to_f < 1.2
+    else
+      message = nil
     end
+    render :json => {:message => message, :venues => venues}
   end
   
   private

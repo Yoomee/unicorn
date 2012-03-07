@@ -23,7 +23,7 @@
               =visit.venue.primary_category.name
           %td=visit.here_now
           %td
-            -if visit.event
+            -if visit.event_id.present?
               %i.icon-ok
   =will_paginate @visits
   
