@@ -15,7 +15,7 @@ namespace :unicorn do
     if minutes_since_move < (45 + (30*Kernel.rand))
       puts "It's too soon to move"
     else
-      recent_venues = Visit.order('arrived_at DESC').limit(5).collect(&:venue)
+      recent_venues = Visit.order('arrived_at DESC').limit(4).collect(&:venue)
       
       #Get popular venues, those with the most here_now
       popular_venues = Venue.not_blacklisted.order('here_now DESC').limit(6)

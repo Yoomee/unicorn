@@ -12,7 +12,7 @@
       .navbar.navbar-fixed-top
         .navbar-inner
           .container
-            %ul.nav
+            %ul.nav.pull-left
               %li{:class => "#{'active' if action_name == 'iphone'}"}
                 =link_to(admin_path) do
                   %i.icon-home.icon-white
@@ -21,6 +21,10 @@
                 =link_to(visits_path) do
                   %i.icon-screenshot.icon-white
                   Sightings
+              %li{:class => "#{'active' if controller_name == 'venues'}"}
+                =link_to(venues_path) do
+                  %i.icon-map-marker.icon-white
+                  Venues
               %li{:class => "#{'active' if controller_name == 'messages'}"}
                 =link_to(message_path) do
                   %i.icon-envelope.icon-white
@@ -29,10 +33,6 @@
                 =link_to(events_path) do
                   %i.icon-calendar.icon-white
                   Events
-              %li{:class => "#{'active' if controller_name == 'venues'}"}
-                =link_to(venues_path) do
-                  %i.icon-map-marker.icon-white
-                  Venues
               %li{:class => "#{'active' if controller_name == 'categories'}"}
                 =link_to(categories_path) do
                   %i.icon-list-alt.icon-white
@@ -41,7 +41,11 @@
                 =link_to(app_users_path) do
                   %i.icon-user.icon-white
                   App users
-  
+            %ul.nav.pull-right
+              %li
+                %a#time_now
+                  %i.icon-time.icon-white
+                  =Time.current.strftime('%H:%M')
     #main.container
       .row
         =yield

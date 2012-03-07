@@ -4,14 +4,15 @@
   %table.table.table-bordered.table-striped.table-condensed
     %thead
       %tr
+        %th Arrival time
         %th Venue
         %th Category
-        %th Here now
-        %th Arrival time
+        %th Others
         %th Event
     %tbody
       -@visits.each_with_index do |visit,idx|
         %tr
+          %td=visit.arrived_at.strftime('%H:%M on %a %e %B %G')        
           %td
             =link_to(visit.venue.name,visit.venue.fs_url, :target => "_blank")
             -if idx.zero?
@@ -21,7 +22,6 @@
               =image_tag(visit.venue.primary_category.icon_url)
               =visit.venue.primary_category.name
           %td=visit.here_now
-          %td=visit.arrived_at.strftime('%H:%M on %a %e %B %G')
           %td=visit.event.try(:name)
   =will_paginate @visits
   

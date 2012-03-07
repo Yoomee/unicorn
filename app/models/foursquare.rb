@@ -81,6 +81,19 @@ class Foursquare
     def get_venue(fsid)
       get("/v2/venues/#{fsid}")
     end
+    
+    def get_here_now_users(venue)
+      res = get("/v2/venues/#{venue.fsid}/herenow", :query => {:oauth_token => USER_TOKEN, :limit => 500})["response"]
+      items_data = res["hereNow"]["items"]
+      offset = 500
+      while res["hereNow"]["count"] > offset
+        items_data += get("/v2/venues/#{venue.fsid}/herenow", :query => {:oauth_token => USER_TOKEN, :limit => 500, :offset => offset})["response"]["hereNow"]["items"]
+        offset += 500
+      end
+      items_data.collect do |item_data|
+        FoursquareUser.from_hash(item_data["user"])
+      end
+    end
 
     def get_trending(lat, lng)
       get("/v2/venues/trending", :query => {:ll => "#{lat},#{lng}", :radius => 1500, :limit => 50})

@@ -88,3 +88,7 @@ tr.blacklisted a{
 }
 
 .date_time_select select{width:70px;}
+
+#time_now{
+  color:#fff;
+}

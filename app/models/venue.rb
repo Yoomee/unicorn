@@ -10,15 +10,15 @@ class Venue < ActiveRecord::Base
   class << self
     def get_trending(center,radius)
       Foursquare.get_trending_with_grid(center[0], center[1],radius).each do |venue_data|
-        from_json(venue_data)
+        from_hash(venue_data)
       end
     end
 
     def from_foursquare_id(fsid)
-      from_json(Foursquare.get_venue(fsid)["response"]["venue"])
+      from_hash(Foursquare.get_venue(fsid)["response"]["venue"])
     end
 
-    def from_json(venue_data)
+    def from_hash(venue_data)
       venue = find_or_initialize_by_fsid(venue_data["id"])
       venue.update_attributes!({  
         :name => venue_data["name"],
