@@ -28,10 +28,8 @@ namespace :unicorn do
       if event #&& ((event.venue.here_now * 3) > popular_venue.here_now) Event always wins
         event.venue.visits.create(:arrived_at => Time.current, :event => event, :here_now => event.venue.here_now)
         puts "He's moved to the event #{event.name}"
-        Foursquare.checkin(event.venue,event.checkin_message)
       else
         popular_venue.visits.create(:arrived_at => Time.current, :here_now => popular_venue.here_now)
-        Foursquare.checkin(popular_venue)
         puts "He's moved to #{popular_venue.name}"
       end
     end

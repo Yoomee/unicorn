@@ -10,6 +10,7 @@ Unicorn::Application.routes.draw do
     end
   end
   resources :events
+  resources :site_settings
   resource  :message
   resources :venues  
   resources :visits, :only => [:index] do

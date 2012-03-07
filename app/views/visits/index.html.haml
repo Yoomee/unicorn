@@ -22,6 +22,8 @@
               =image_tag(visit.venue.primary_category.icon_url)
               =visit.venue.primary_category.name
           %td=visit.here_now
-          %td=visit.event.try(:name)
+          %td
+            -if visit.event
+              %i.icon-ok
   =will_paginate @visits
   

@@ -16,7 +16,7 @@
         %th Options
     %tbody
       -@events.each do |event|
-        %tr
+        %tr{:class => "#{'blacklisted' if event.ends_at < Time.current}"}
           %td=event.starts_at.strftime('%H:%M on %a %e %B %G')
           %td=event.ends_at.strftime('%H:%M on %a %e %B %G')
           %td=link_to(event.venue.name,event.venue.fs_url, :target => "_blank")

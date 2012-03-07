@@ -1,0 +1,16 @@
+.span8
+  %h1 Site settings
+.span10
+  %table.table.table-bordered.table-striped.table-condensed
+    %thead
+      %tr
+        %th Name
+        %th Value
+        %th Options
+    %tbody
+      -@site_settings.each do |site_setting|
+        %tr
+          %td=site_setting.name.humanize
+          %td=site_setting.value
+          %td=link_to('Edit', edit_site_setting_path(site_setting))
+          

@@ -41,6 +41,10 @@
                 =link_to(app_users_path) do
                   %i.icon-user.icon-white
                   App users
+              %li{:class => "#{'active' if controller_name == 'site_settings'}"}
+                =link_to(site_settings_path) do
+                  %i.icon-cog.icon-white
+                  Settings
             %ul.nav.pull-right
               %li
                 %a#time_now

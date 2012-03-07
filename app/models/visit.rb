@@ -2,7 +2,7 @@ class Visit < ActiveRecord::Base
   belongs_to :venue
   belongs_to :event
   has_and_belongs_to_many :foursquare_users
-  before_create :fetch_here_now
+  before_create :checkin_and_fetch_users
   
   def as_json(options)
     if event && event.name.present?
@@ -30,7 +30,10 @@ class Visit < ActiveRecord::Base
   end
   
   private
-  def fetch_here_now
-    self.foursquare_users = Foursquare.get_here_now_users(venue)
+  def checkin_and_fetch_users
+    if SiteSetting.find_by_name("fourquare_checkins_enabled").value == "YES"
+      Foursquare.checkin(venue,event.try(:checkin_message))
+      self.foursquare_users = Foursquare.get_here_now_users(venue)
+    end
   end
 end
