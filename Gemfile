@@ -20,6 +20,7 @@ gem 'whenever', :require => false
 
 group :development do
   gem 'sqlite3-ruby'
+  gem 'engineyard'
 end
 
 group :assets do
